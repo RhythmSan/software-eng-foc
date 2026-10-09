@@ -1,0 +1,232 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark-green: #1C4B2A;
+  --bg-cream: #EBF1E3;
+  --text-dark: #1A2E1F;
+  --border-input: #C8D6C0;
+  --border-btn: #C8D6C0;
+  --error: #C0392B;
+  --success: #2E7D4A;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== LAYOUT ========== */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background-color: var(--bg-dark-green);
+  color: #fff;
+  padding: 80px 24px 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: padding 0.3s ease;
+}
+
+.logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: #C0D6B8;
+  font-weight: 400;
+}
+
+/* ========== BOTTOM CARD ========== */
+.bottom-card {
+  background-color: var(--bg-cream);
+  border-radius: 32px 32px 0 0;
+  flex: 1;
+  margin-top: -40px;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.bottom-card > * {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ========== TOGGLE ========== */
+.toggle-container {
+  display: flex;
+  background-color: #fff;
+  border: 1.5px solid var(--border-btn);
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.toggle-btn.active {
+  background-color: var(--bg-dark-green);
+  color: #fff;
+}
+
+.toggle-btn:hover:not(.active) {
+  color: var(--bg-dark-green);
+}
+
+/* ========== FORM ========== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 16px 22px;
+  border: 1.5px solid var(--border-input);
+  border-radius: 50px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  animation: fadeIn 0.25s ease;
+}
+
+.input-field::placeholder {
+  color: #7A8E75;
+}
+
+.input-field:focus {
+  border-color: var(--bg-dark-green);
+  box-shadow: 0 0 0 3px rgba(28, 75, 42, 0.1);
+}
+
+.input-field.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+/* Message */
+.form-message {
+  font-size: 0.85rem;
+  text-align: center;
+  min-height: 20px;
+  margin: -4px 0 0;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.form-message.error { color: var(--error); }
+.form-message.success { color: var(--success); }
+
+/* ========== SUBMIT BUTTON ========== */
+.btn-submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--bg-dark-green);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+  background-color: #153F2B;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+.btn-submit:disabled {
+  background-color: #4A6B4F;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ========== FORGOT LINK ========== */
+.forgot-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover {
+  color: var(--bg-dark-green);
+  text-decoration: underline;
+}
+
+.forgot-link.hidden {
+  visibility: hidden;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-6px); }
+  75%      { transform: translateX(6px); }
+}
+
+.input-field.shake {
+  animation: shake 0.3s ease;
+}

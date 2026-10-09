@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Trips — HeritageGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/mytripsPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== SIDEBAR OVERLAY ========== -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="landingPage.html" class="sidebar-link" data-page="explore">
+        <img src="../Images/logos/compass.png" alt="" class="sidebar-icon-img">
+        <span>Explore</span>
+      </a>
+      <a href="mytripsPage.html" class="sidebar-link" data-page="trips">
+        <img src="../Images/logos/wishlist.png" alt="" class="sidebar-icon-img">
+        <span>My Trips</span>
+      </a>
+      <a href="accountPage.html" class="sidebar-link" data-page="account">
+  <img src="../Images/logos/user.png" alt="" class="sidebar-icon-img">
+  <span>Account</span>
+</a>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ========== TOP HEADER ========== -->
+  <header class="trips-header">
+    <div class="trips-title-row">
+      <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+        <span class="logo-icon" id="logoIcon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+    </div>
+
+    <h1>My Trips</h1>
+    <p class="trips-sub">
+      <span class="cloud-icon">☁</span>
+      Synced to your account
+    </p>
+  </header>
+
+  <!-- ========== PROGRESS CARD ========== -->
+  <section class="progress-card">
+    <p class="progress-label">Heritage progress</p>
+    <p class="progress-count">
+      <span class="progress-num" id="visitedCount">2</span>
+      <span class="progress-total">of <span id="totalCount">5</span> landmarks visited</span>
+    </p>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width: 40%;"></div>
+    </div>
+  </section>
+
+  <!-- ========== TOGGLE ========== -->
+  <div class="trips-toggle">
+    <button class="toggle-pill active" data-view="bucket">
+      Bucket list (<span id="bucketCount">3</span>)
+    </button>
+    <button class="toggle-pill" data-view="visited">
+      Visited (<span id="visitedTabCount">2</span>)
+    </button>
+  </div>
+
+  <!-- ========== TRIP LIST ========== -->
+  <main class="trips-list" id="tripsList">
+    <!-- Cards rendered by JS -->
+  </main>
+
+  <script src="../JS/landingpageSidebar.js"></script>
+  <script src="../JS/mytripsPage.js"></script>
+</body>
+</html>

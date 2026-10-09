@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walking — HeritageGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/walkmapPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== TOP BAR ========== -->
+  <header class="walk-header">
+    <a href="placesPage.html" class="back-btn" id="backBtn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+    </a>
+    <div class="walk-title-pill" id="walkTitle">
+      Walking to <span id="placeName">Barasoain Church</span>
+    </div>
+  </header>
+
+  <!-- ========== MAP CANVAS ========== -->
+  <div class="walk-map">
+
+    <!-- Roads -->
+    <div class="road road-h1"></div>
+    <div class="road road-h2"></div>
+    <div class="road road-h3"></div>
+    <div class="road road-v1"></div>
+    <div class="road road-v2"></div>
+    <div class="road road-v3"></div>
+    <div class="road road-v4"></div>
+
+    <!-- Buildings / blocks -->
+    <div class="map-block block-1"></div>
+    <div class="map-block block-2"></div>
+
+    <!-- Walking route (dotted path) -->
+    <svg class="walk-route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <path
+        d="M 30 88 L 30 45 L 65 45"
+        fill="none"
+        stroke="#1c4b2a"
+        stroke-width="1"
+        stroke-dasharray="2 1.5"
+        stroke-linecap="round"
+        vector-effect="non-scaling-stroke"
+      />
+    </svg>
+
+    <!-- Destination pin label -->
+    <div class="dest-pill" id="destPill">
+      <span class="dest-dot"></span>
+      <span id="destName">Barasoain Church</span>
+    </div>
+
+    <!-- You marker -->
+    <div class="you-marker">
+      <div class="you-inner"></div>
+    </div>
+    <span class="you-label">You</span>
+    <!-- Terrain wave (bottom) -->
+    <div class="map-terrain"></div>
+
+  </div>
+  <!-- ========== END MAP CANVAS ========== -->
+
+    <!-- Overlay layer -->
+  <div class="map-ui-overlay">
+    <div class="zoom-controls">
+      <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
+      <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
+    </div>
+  </div>
+
+  <!-- ========== BOTTOM SHEET ========== -->
+  <div class="walk-sheet">
+
+    <!-- Time + distance -->
+    <div class="walk-meta">
+      <span class="walk-time" id="walkTime">11 min</span>
+      <span class="walk-details" id="walkDetails">850 m · pedestrian path</span>
+    </div>
+
+    <!-- Steps -->
+    <ul class="walk-steps">
+      <li>
+        <span class="step-dot"></span>
+        <span>Start from your current location</span>
+      </li>
+      <li>
+        <span class="step-dot"></span>
+        <span>Follow the dotted walking path</span>
+      </li>
+      <li>
+        <span class="step-dot"></span>
+        <span>Arrive at <strong id="stepDest">Barasoain Church</strong></span>
+      </li>
+    </ul>
+
+    <!-- CTA -->
+    <button class="checkin-btn" id="checkinBtn">
+      I've arrived · Check in
+    </button>
+
+  </div>
+
+  <script src="../JS/walkmapPage.js"></script>
+</body>
+</html>

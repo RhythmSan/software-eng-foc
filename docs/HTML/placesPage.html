@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place — HeritageGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/placesPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== HERO IMAGE ========== -->
+  <div class="detail-hero">
+    <img src="../Images/placeholders/barasoain.jpg" alt="" class="detail-hero-img" id="detailImage">
+
+    <a href="landingPage.html" class="icon-btn back-btn" aria-label="Go back">
+      <img src="../Images/logos/back.png" alt="" class="icon-btn-img">
+    </a>
+
+    <button class="icon-btn save-btn" id="saveBtn" aria-label="Save">
+      <img src="../Images/logos/wishlist.png" alt="" class="icon-btn-img">
+    </button>
+  </div>
+
+  <!-- ========== DETAIL CARD ========== -->
+  <main class="detail-card">
+
+    <!-- Tag row -->
+    <div class="detail-tags">
+      <span class="detail-tag" id="detailCategory">Historical</span>
+      <span class="detail-location" id="detailLocation">Malolos City, Bulacan</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="detail-title" id="detailName">Loading…</h1>
+
+    <!-- Rating + distance -->
+    <div class="detail-meta">
+      <span class="detail-rating">
+        <span class="star">★</span>
+        <span id="detailRating">4.8</span>
+      </span>
+      <span class="detail-dot">·</span>
+      <span id="detailReviews">126 reviews</span>
+      <span class="detail-dot">·</span>
+      <span id="detailDistance">1lkm away</span>
+    </div>
+
+    <!-- Description -->
+    <p class="detail-description" id="detailDescription">
+      Loading description…
+    </p>
+
+    <!-- Action buttons -->
+    <div class="detail-actions">
+      <button class="action-btn action-btn--primary" id="walkBtn">
+        <img src="../Images/logos/man-walking.png" alt="" class="action-icon">
+        <span>Walk</span>
+      </button>
+
+      <button class="action-btn action-btn--secondary" id="bucketBtn">
+        <img src="../Images/logos/checklist.png" alt="" class="action-icon">
+        <span>Add to bucket list</span>
+      </button>
+    </div>
+
+    <button class="action-btn action-btn--wide" id="visitedBtn">
+      <img src="../Images/logos/check-mark.png" alt="" class="action-icon">
+      <span>Mark as visited</span>
+    </button>
+
+        <!-- Reviews section -->
+    <section class="detail-reviews">
+      <div class="reviews-header">
+        <h2>Ratings &amp; reviews</h2>
+        <a href="#" class="see-all">See all</a>
+      </div>
+
+      <!-- ===== Review / comment input card ===== -->
+      <div class="review-form">
+        <h3 class="review-form-title">Rate your visit</h3>
+
+        <!-- Star rating -->
+        <div class="star-picker" id="starPicker" aria-label="Rate this place">
+          <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+          <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+          <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+          <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+          <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+        </div>
+
+        <!-- Comment box -->
+        <textarea
+          id="reviewText"
+          class="review-textarea"
+          placeholder="Share what you loved about this place..."
+          rows="4"
+        ></textarea>
+
+        <button type="button" class="review-submit" id="reviewSubmit">
+          Submit review
+        </button>
+      </div>
+
+      <!-- ===== Existing reviews ===== -->
+      <div class="reviews-list" id="reviewsList">
+        <!--
+          FUTURE: reviews will be inserted here as
+          <div class="review-item"> ... </div> elements.
+        
+        -->
+      </div>
+    </section>
+
+  </main>
+
+  
+
+  <script src="../JS/placesPage.js"></script>
+</body>
+</html>
