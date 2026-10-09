@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeritageGo — Malolos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/landingPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+      <span class="logo-icon" id="logoIcon"></span>
+      <span class="logo-text">HeritageGo</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#">Landmarks</a>
+      <a href="#">Features</a>
+      <a href="#">Map</a>
+      <a href="login&signupPage.html" class="btn-login">Log in</a>
+    </nav>
+  </header>
+
+  <!-- ========== SIDEBAR ========== -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="sidebar-nav">
+  <a href="landingPage.html" class="sidebar-link" data-page="explore">
+    <img src="../Images/logos/compass.png" alt="" class="sidebar-icon-img">
+    <span>Explore</span>
+  </a>
+  <a href="mytripsPage.html" class="sidebar-link" data-page="trips">
+    <img src="../Images/logos/wishlist.png" alt="" class="sidebar-icon-img">
+    <span>My Trips</span>
+  </a>
+  <a href="#account" class="sidebar-link" data-page="account">
+    <img src="../Images/logos/user.png" alt="" class="sidebar-icon-img">
+    <span>Account</span>
+  </a>
+</nav>
+
+  </aside>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Malolos City, Bulacan</span>
+      <h1>Walk through the<br>history of Malolos.</h1>
+
+      <div class="hero-tagline-rotator">
+        <p class="hero-sub tagline-line tagline-line--greeting">
+          Kumusta, Mabuhay!<br>Where are we going today?
+        </p>
+        <p class="hero-sub tagline-line tagline-line--description">
+          Discover historical landmarks, parks and cultural sites. Save your bucket list, check in where you've been, and follow a walking path to your next stop.
+        </p>
+      </div>
+
+      <div class="search-row">
+        <input type="text" placeholder="Search landmarks, parks, churches" class="search-input">
+        <button class="btn-primary" id="startBtn" type="button">Start exploring</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="placeholder-graphic">
+        <div class="church-silhouette">
+          <div class="tower left"></div>
+          <div class="tower right"></div>
+          <div class="main-body"></div>
+          <div class="arch"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED LANDMARKS ========== -->
+  <section class="featured">
+    <div class="section-header">
+      <h2>Featured landmarks</h2>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="historical">Historical</button>
+        <button class="tab" data-filter="cultural">Cultural</button>
+        <button class="tab" data-filter="parks">Parks</button>
+      </div>
+    </div>
+
+    <div class="card-grid" id="cardGrid">
+
+      <!-- Card 1 -->
+      <a href="placesPage.html?id=barasoain" class="card" data-category="historical">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Historical</span>
+          <h3>Barasoain Church</h3>
+          <p>Site of the 1898 Malolos Congress and the Malolos Constitution.</p>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="placesPage.html?id=casa-real" class="card" data-category="historical">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Historical</span>
+          <h3>Casa Real Shrine</h3>
+          <p>Former seat of government of the First Philippine Republic.</p>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="placesPage.html?id=malolos-cathedral" class="card" data-category="cultural">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Cultural</span>
+          <h3>Malolos Cathedral</h3>
+          <p>The Immaculate Conception parish church at the heart of the town center.</p>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="placesPage.html?id=paseo" class="card" data-category="parks">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Parks</span>
+          <h3>Paseo del Congreso</h3>
+          <p>A walkable promenade connecting the heritage sites.</p>
+        </div>
+      </a>
+
+      <!-- Extra Historical -->
+      <a href="placesPage.html?id=republic-shrine" class="card" data-category="historical">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Historical</span>
+          <h3>Malolos Republic Shrine</h3>
+          <p>Marker honoring the birthplace of Asia's first republic.</p>
+        </div>
+      </a>
+
+      <a href="placesPage.html?id=barasoain-museum" class="card" data-category="historical">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Historical</span>
+          <h3>Barasoain Museum</h3>
+          <p>Artifacts from the revolutionary period and the Malolos Congress.</p>
+        </div>
+      </a>
+
+      <!-- Extra Cultural -->
+      <a href="placesPage.html?id=heritage-house" class="card" data-category="cultural">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Cultural</span>
+          <h3>Malolos Heritage House</h3>
+          <p>Preserved ancestral home showcasing Bulacan's artistry.</p>
+        </div>
+      </a>
+
+      <a href="placesPage.html?id=arts-center" class="card" data-category="cultural">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Cultural</span>
+          <h3>Bulacan Arts Center</h3>
+          <p>Local crafts, weaving, and contemporary Bulakeño art.</p>
+        </div>
+      </a>
+
+      <!-- Extra Parks -->
+      <a href="placesPage.html?id=sports-complex" class="card" data-category="parks">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Parks</span>
+          <h3>Malolos Sports Complex</h3>
+          <p>Green open space for jogging, picnics, and community events.</p>
+        </div>
+      </a>
+
+      <a href="placesPage.html?id=capitol-grounds" class="card" data-category="parks">
+        <div class="card-image"><div class="mini-graphic"></div></div>
+        <div class="card-body">
+          <span class="card-tag">Parks</span>
+          <h3>Bulacan Provincial Capitol Grounds</h3>
+          <p>Landscaped grounds and open plazas in the city center.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features">
+    <h2>Everything for a day of exploring</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h4>Discover</h4>
+        <p>Browse historical, cultural and recreational sites with search and category filters.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Walk there</h4>
+        <p>See a pedestrian path from where you stand to the landmark you picked.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Bucket list &amp; check-ins</h4>
+        <p>Save places to visit, mark them visited, and keep it all synced to your account.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Ratings &amp; reviews</h4>
+        <p>Share what you thought, and read what other visitors say before you go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAP SECTION ========== -->
+  <section class="map-section">
+    <h2>All on one map</h2>
+
+    <div class="map-canvas">
+      <div class="road road-h1"></div>
+      <div class="road road-h2"></div>
+      <div class="road road-h3"></div>
+      <div class="road road-v1"></div>
+      <div class="road road-v2"></div>
+      <div class="road road-v3"></div>
+      <div class="road road-v4"></div>
+
+      <div class="map-block block-1"></div>
+      <div class="map-block block-2"></div>
+
+      <span class="map-pin pin-1">📍</span>
+      <span class="map-pin pin-2">📍</span>
+      <span class="map-pin pin-3">📍</span>
+
+      <div class="map-terrain"></div>
+      <div class="map-attribution">Map data · OpenStreetMap / Geoapify</div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">HeritageGo</div>
+      <p class="footer-text">
+       2026 MitoDoesCode // https://github.com/MitoDoCode
+       <br>
+       2026 IdreDev // https://github.com/IdreDev
+      </p>
+    </div>
+  </footer>
+
+  <script src="../JS/landingPage.js"></script>
+  <script src="../JS/easteregg.js"></script>
+  <script src="../JS/landingpageSidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account — HeritageGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/accountPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== SIDEBAR OVERLAY ========== -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="landingPage.html" class="sidebar-link" data-page="explore">
+        <img src="../Images/logos/compass.png" alt="" class="sidebar-icon-img">
+        <span>Explore</span>
+      </a>
+      <a href="mytripsPage.html" class="sidebar-link" data-page="trips">
+        <img src="../Images/logos/wishlist.png" alt="" class="sidebar-icon-img">
+        <span>My Trips</span>
+      </a>
+      <a href="accountPage.html" class="sidebar-link" data-page="account">
+        <img src="../Images/logos/user.png" alt="" class="sidebar-icon-img">
+        <span>Account</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ========== HEADER ========== -->
+  <header class="account-header">
+    <div class="account-title-row">
+      <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+        <span class="logo-icon" id="logoIcon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+    </div>
+
+    <h1>Account</h1>
+  </header>
+
+  <!-- ========== PROFILE CARD ========== -->
+  <section class="profile-card">
+    <div class="profile-avatar" id="profileAvatar">DJ</div>
+    <div class="profile-info">
+      <p class="profile-name" id="profileName">Your name</p>
+      <p class="profile-email" id="profileEmail">you@example.com</p>
+    </div>
+  </section>
+
+  <!-- ========== STATS ROW ========== -->
+  <section class="stats-row">
+    <a href="mytripsPage.html?view=visited" class="stat-card">
+      <span class="stat-num" id="statVisited">2</span>
+      <span class="stat-label">Visited</span>
+    </a>
+    <a href="mytripsPage.html?view=bucket" class="stat-card">
+      <span class="stat-num" id="statBucket">3</span>
+      <span class="stat-label">Bucket list</span>
+    </a>
+    <a href="#" class="stat-card">
+      <span class="stat-num" id="statReviews">2</span>
+      <span class="stat-label">Reviews</span>
+    </a>
+  </section>
+
+  <!-- ========== MENU LIST ========== -->
+  <nav class="menu-list">
+    <button class="menu-item" data-action="edit-profile" type="button">
+      <span>Edit profile</span>
+      <span class="menu-arrow">›</span>
+    </button>
+
+    <button class="menu-item" data-action="my-reviews" type="button">
+      <span>My reviews</span>
+      <span class="menu-arrow">›</span>
+    </button>
+
+    <button class="menu-item" data-action="change-password" type="button">
+      <span>Change password</span>
+      <span class="menu-arrow">›</span>
+    </button>
+
+    <button class="menu-item" data-action="about" type="button">
+      <span>About HeritageGo</span>
+      <span class="menu-arrow">›</span>
+    </button>
+  </nav>
+
+  <!-- ========== SIGN OUT ========== -->
+  <button class="sign-out-btn" id="signOutBtn" type="button">Sign out</button>
+
+  <script src="../JS/landingpageSidebar.js"></script>
+  <script src="../JS/accountPage.js"></script>
+</body>
+</html>

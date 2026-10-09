@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeritageGo — Log In</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/login&signupPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-page">
+    
+    <!-- Top Header -->
+    <div class="header">
+      <h1 class="logo">HeritageGO</h1>
+      <p class="tagline">Malolos City – Travel &amp; Cultural Exploration</p>
+    </div>
+
+    <!-- Bottom Card -->
+    <div class="bottom-card">
+      
+      <!-- Toggle -->
+      <div class="toggle-container">
+        <button type="button" class="toggle-btn active" data-tab="login">Log in</button>
+        <button type="button" class="toggle-btn" data-tab="signup">Sign up</button>
+      </div>
+
+      <!-- Form -->
+      <form class="login-form" id="authForm" novalidate>
+        
+        <!-- Name -->
+        <input 
+          type="text" 
+          placeholder="Full name" 
+          class="input-field" 
+          id="nameField"
+          style="display: none;"
+        >
+
+        <input 
+          type="email" 
+          placeholder="Email" 
+          class="input-field" 
+          id="emailField" 
+          required
+        >
+
+        <input 
+          type="password" 
+          placeholder="Password" 
+          class="input-field" 
+          id="passwordField" 
+          required
+          minlength="6"
+        >
+
+        <!-- Confirm Password  -->
+        <input 
+          type="password" 
+          placeholder="Confirm password" 
+          class="input-field" 
+          id="confirmField"
+          style="display: none;"
+        >
+
+        <!-- Message area for errors / success -->
+        <p class="form-message" id="formMessage"></p>
+
+        <button type="submit" class="btn-submit" id="submitBtn" >Log in</button>
+      </form>
+
+      <a href="#" class="forgot-link" id="forgotLink">Forgot password?</a>
+
+    </div>
+
+  </div>
+
+  <script src="../JS/login&signupPage.js"></script>
+</body>
+</html>
