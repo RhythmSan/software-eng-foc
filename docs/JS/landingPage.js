@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
      1. LANDMARK DATA (shared by Explore list)
      ======================================================== */
   const LANDMARKS = [
-    { id: 'barasoain',         name: 'Barasoain Church',                 category: 'historical', distance: '0.9 km', rating: 5, image: '../Images/velvetroom.jpg' },
-    { id: 'casa-real',         name: 'Casa Real Shrine',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/placeholders/casa-real.jpg' },
-    { id: 'malolos-cathedral', name: 'Malolos Cathedral',                category: 'cultural',   distance: '1.3 km', rating: 5, image: '../Images/placeholders/malolos-cathedral.jpg' },
-    { id: 'kamestizuhan',      name: 'Kamestizuhan District',            category: 'cultural',   distance: '1.6 km', rating: 5, image: '../Images/placeholders/kamestizuhan.jpg' },
-    { id: 'paseo',             name: 'Paseo del Congreso',               category: 'parks',      distance: '1.8 km', rating: 5, image: '../Images/placeholders/paseo.jpg' },
-    { id: 'republic-shrine',   name: 'Malolos Republic Shrine',          category: 'historical', distance: '1.3 km', rating: 4, image: '../Images/placeholders/republic-shrine.jpg' },
-    { id: 'barasoain-museum',  name: 'Barasoain Museum',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/placeholders/barasoain-museum.jpg' },
-    { id: 'heritage-house',    name: 'Malolos Heritage House',           category: 'cultural',   distance: '0.9 km', rating: 4, image: '../Images/placeholders/heritage-house.jpg' },
-    { id: 'arts-center',       name: 'Bulacan Arts Center',              category: 'cultural',   distance: '1.7 km', rating: 4, image: '../Images/placeholders/arts-center.jpg' },
-    { id: 'sports-complex',    name: 'Malolos Sports Complex',           category: 'parks',      distance: '2.0 km', rating: 4, image: '../Images/placeholders/sports-complex.jpg' },
-    { id: 'capitol-grounds',   name: 'Bulacan Provincial Capitol Grounds',category: 'parks',     distance: '1.6 km', rating: 4, image: '../Images/placeholders/capitol-grounds.jpg' }
+    { id: 'barasoain',         name: 'Barasoain Church',                 category: 'historical', distance: '0.9 km', rating: 5, image: '../Images/Barasoain-Church.jpg' },
+    { id: 'casa-real',         name: 'Casa Real Shrine',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/casa-real.jpg' },
+    { id: 'malolos-cathedral', name: 'Malolos Cathedral',                category: 'cultural',   distance: '1.3 km', rating: 5, image: '../Images/malolos-cathedral.jpg' },
+    { id: 'kamestizuhan',      name: 'Kamestizuhan District',            category: 'cultural',   distance: '1.6 km', rating: 5, image: '../Images/kamestizuhan.jpg' },
+    { id: 'paseo',             name: 'Paseo del Congreso',               category: 'parks',      distance: '1.8 km', rating: 5, image: '../Images/paseo.jpg' },
+    { id: 'republic-shrine',   name: 'Malolos Republic Shrine',          category: 'historical', distance: '1.3 km', rating: 4, image: '../Images/republic-shrine.jpg' },
+    { id: 'barasoain-museum',  name: 'Barasoain Museum',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/barasoain-museum.jpg' },
+    { id: 'heritage-house',    name: 'Malolos Heritage House',           category: 'cultural',   distance: '0.9 km', rating: 4, image: '../Images/heritage-house.jpg' },
+    { id: 'arts-center',       name: 'Bulacan Arts Center',              category: 'cultural',   distance: '1.7 km', rating: 4, image: '../Images/arts-center.jpg' },
+    { id: 'sports-complex',    name: 'Malolos Sports Complex',           category: 'parks',      distance: '2.0 km', rating: 4, image: '../Images/sports-complex.jpg' },
+    { id: 'capitol-grounds',   name: 'Bulacan Provincial Capitol Grounds',category: 'parks',     distance: '1.6 km', rating: 4, image: '../Images/capitol-grounds.jpg' }
   ];
 
   const CATEGORY_LABEL = {
