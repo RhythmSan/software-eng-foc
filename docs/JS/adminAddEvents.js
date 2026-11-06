@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear the session
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+      // Redirect back to the login page 
       window.location.href = 'admin.html';
     }
   });

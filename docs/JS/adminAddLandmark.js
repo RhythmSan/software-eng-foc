@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Since this is a prototype, we'll just simulate saving and redirect
+   
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.textContent = 'Saving...';
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear the session
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+      // Redirect back to the login page 
       window.location.href = 'admin.html';
     }
   });

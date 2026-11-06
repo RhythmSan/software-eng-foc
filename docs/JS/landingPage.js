@@ -129,4 +129,81 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderExplore();
+
+  /* ========================================================
+     4. HERO ANNOUNCEMENTS SLIDER
+     ======================================================== */
+  const ANNOUNCEMENTS = [
+    {
+      tag: 'Upcoming',
+      title: 'Malolos Heritage Week',
+      desc: 'Join us from Sep 15 to Sep 21 for a week of cultural tours and exhibits.'
+    },
+    {
+      tag: 'Update',
+      title: 'Barasoain Church Hours',
+      desc: 'Opening hours extended to 6 PM on weekends starting this month.'
+    },
+    {
+      tag: 'Notice',
+      title: 'Free Walking Tours',
+      desc: 'Free guided walking tours are available every Saturday morning.'
+    }
+  ];
+
+  const track = document.getElementById('announcementTrack');
+  const dotsContainer = document.getElementById('announcementDots');
+  let currentIndex = 0;
+  let slideInterval;
+
+  if (track && dotsContainer) {
+    // 1. Generate the HTML for the cards
+    track.innerHTML = ANNOUNCEMENTS.map(ann => `
+      <div class="announcement-card">
+        <span class="announcement-tag">${ann.tag}</span>
+        <h3>${ann.title}</h3>
+        <p>${ann.desc}</p>
+      </div>
+    `).join('');
+
+    // 2. Generate the dots
+    dotsContainer.innerHTML = ANNOUNCEMENTS.map((_, i) => 
+      `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`
+    ).join('');
+
+    const dots = dotsContainer.querySelectorAll('.dot');
+
+    // 3. Function to move to a specific slide
+    function goToSlide(index) {
+      currentIndex = index;
+      // Move the track horizontally
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update dot active states
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    // 4. Auto-play logic
+    function startSlideShow() {
+      slideInterval = setInterval(() => {
+        let nextIndex = (currentIndex + 1) % ANNOUNCEMENTS.length;
+        goToSlide(nextIndex);
+      }, 4000); // Changes every 4 seconds
+    }
+
+    // 5. Click on dots to navigate
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(slideInterval); // Stop auto-play temporarily
+        goToSlide(i);
+        startSlideShow(); // Restart auto-play
+      });
+    });
+
+    // Start the slider
+    startSlideShow();
+  }
+
 });

@@ -61,7 +61,6 @@
 </nav>
 
   </aside>
-
   <!-- ========== HERO ========== -->
   <section class="hero">
     <div class="hero-content">
@@ -76,26 +75,25 @@
           Discover historical landmarks, parks and cultural sites. Save your bucket list, check in where you've been, and follow a walking path to your next stop.
         </p>
       </div>
- <!-- 
-      <div class="search-row">
-        <input type="text" placeholder="Search landmarks, parks, churches" class="search-input">
-        <button class="btn-primary" id="startBtn" type="button">Start exploring</button>
-      </div>
--->
-
     </div>
 
-    <div class="hero-image">
-      <div class="placeholder-graphic">
-        <div class="church-silhouette">
-          <div class="tower left"></div>
-          <div class="tower right"></div>
-          <div class="main-body"></div>
-          <div class="arch"></div>
-        </div>
+    <!-- NEW HERO ANNOUNCEMENTS SLIDER -->
+    <div class="hero-announcements">
+      <!-- The track moves, the wrapper hides overflow -->
+      <div class="announcement-track" id="announcementTrack">
+        <!-- Content is injected by JS -->
+      </div>
+      
+      <!-- Dot indicators -->
+      <div class="announcement-dots" id="announcementDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
       </div>
     </div>
+    
   </section>
+
+  
   <!-- ========== FEATURED LANDMARKS ========== -->
   <section class="featured" id="landmarks">
     <div class="section-header">

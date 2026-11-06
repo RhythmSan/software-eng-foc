@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   */
 
-    // Sign Out Logic
+     // Sign Out Logic
   document.getElementById('adminSignOutBtn')?.addEventListener('click', () => {
     if (confirm('Sign out of the Admin Portal?')) {
       // Clear the session
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+      // Redirect back to the login page 
       window.location.href = 'admin.html';
     }
   });
