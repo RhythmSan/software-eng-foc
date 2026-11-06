@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — HeritageGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-login-body">
+
+  <div class="admin-login-card">
+    <div class="admin-login-header">
+      <img src="../Images/logos/malolos logo.png" alt="HeritageGo" class="admin-login-logo">
+      <h1>Admin Portal</h1>
+      <p>Sign in to manage HeritageGo</p>
+    </div>
+
+    <form id="adminLoginForm" class="admin-login-form" novalidate>
+      <div class="admin-input-group">
+        <label for="adminEmail">Email Address</label>
+        <input type="email" id="adminEmail" placeholder="admin@heritagego.ph" required autocomplete="username">
+      </div>
+
+      <div class="admin-input-group">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+
+      <p class="admin-error-msg" id="adminError"></p>
+
+      <button type="submit" class="admin-btn-primary">Log in to Dashboard</button>
+    </form>
+
+    <a href="login&signupPage.html" class="admin-back-link">← Back to main site</a>
+  </div>
+
+  <script src="../JS/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Landmark — HeritageGo Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/adminAddLandmark.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <img src="../Images/logos/malolos logo.png" alt="Logo" class="admin-brand-logo">
+      <div class="admin-brand-text">
+        <span class="brand-title">HeritageGo</span>
+        <span class="brand-subtitle">ADMIN PORTAL</span>
+      </div>
+    </div>
+
+    <nav class="admin-nav">
+      <a href="adminDashboard.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Dashboard
+      </a>
+      <a href="adminLandmarks.html" class="admin-nav-item active">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Landmarks
+      </a>
+      <a href="#" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Events & schedules
+      </a>
+      <a href="#" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Reviews
+      </a>
+      <a href="#" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="admin-sidebar-bottom">
+      <div class="admin-profile">
+        <div class="admin-avatar">AD</div>
+        <div class="admin-profile-info">
+          <span class="admin-name">Administrator</span>
+          <span class="admin-email">admin@heritagego.ph</span>
+        </div>
+      </div>
+      <button class="admin-signout-btn" id="adminSignOutBtn">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="admin-main">
+    
+    <!-- Wrapper forces the header and form to have the same 900px width -->
+    <div class="form-wrapper">
+      
+      <header class="admin-page-header header-flex">
+        <div>
+          <h1>Add landmark</h1>
+          <p>Add, edit and publish the places shown in the app.</p>
+        </div>
+        <a href="adminLandmarks.html" class="admin-back-btn">← Back</a>
+      </header>
+
+      <div class="form-card">
+        <h2 class="form-title">Add landmark</h2>
+        <p class="required-text">* Required field</p>
+        <hr class="form-divider">
+
+        <form id="addLandmarkForm">
+          
+          <h3 class="section-heading">Basic information</h3>
+          
+          <div class="form-row">
+            <div class="input-group">
+              <label>Name *</label>
+              <input type="text" placeholder="e.g. Barasoain Church" required>
+            </div>
+            <div class="input-group">
+              <label>Established</label>
+              <input type="text" placeholder="e.g. 1630">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label>Category *</label>
+              <div class="pill-group">
+                <button type="button" class="pill active">Historical</button>
+                <button type="button" class="pill">Cultural</button>
+                <button type="button" class="pill">Parks</button>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Status *</label>
+              <div class="pill-group">
+                <button type="button" class="pill active">Published</button>
+                <button type="button" class="pill">Draft</button>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="section-heading">Location and check-in</h3>
+          
+          <div class="form-row">
+            <div class="input-group full-width">
+              <label>Address *</label>
+              <input type="text" placeholder="Street, Malolos, Bulacan" required>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button type="button" class="btn-dark">Use my GPS location</button>
+            <button type="button" class="btn-outline">Clear pin</button>
+          </div>
+
+          <div class="map-preview">
+            <div class="map-road map-r1"></div>
+            <div class="map-road map-r2"></div>
+            <div class="map-road map-r3"></div>
+            <div class="map-block map-b1"></div>
+            <div class="map-block map-b2"></div>
+            
+            <span class="map-pill">Tap the map to drop a pin</span>
+            
+            <div class="map-zoom">
+              <button type="button">+</button>
+              <button type="button">−</button>
+            </div>
+          </div>
+          <p class="help-text">Tap the map or use GPS. You can also type the coordinates.</p>
+
+          <div class="form-row three-col">
+            <div class="input-group">
+              <label>Latitude *</label>
+              <input type="text" placeholder="14.8456">
+            </div>
+            <div class="input-group">
+              <label>Longitude *</label>
+              <input type="text" placeholder="120.8108">
+            </div>
+            <div class="input-group">
+              <label>Check-in radius (m) *</label>
+              <input type="number" placeholder="50">
+            </div>
+          </div>
+
+          <h3 class="section-heading">Visitor information</h3>
+          
+          <div class="form-row">
+            <div class="input-group">
+              <label>Opening hours</label>
+              <input type="text" placeholder="e.g. Tue to Sun, 8 AM to 5 PM">
+            </div>
+            <div class="input-group">
+              <label>Entrance fee</label>
+              <input type="text" placeholder="e.g. Free">
+            </div>
+            <div class="input-group">
+              <label>Contact number</label>
+              <input type="text" placeholder="optional">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group full-width">
+              <label>Website</label>
+              <input type="url" placeholder="optional">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group full-width">
+              <label>Description *</label>
+              <textarea rows="4" placeholder="Short object..."></textarea>
+            </div>
+          </div>
+
+          <h3 class="section-heading">Photos</h3>
+          <div class="upload-box">
+            <span>+ Upload</span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-dark" style="padding: 12px 30px;">Save landmark</button>
+            <a href="adminLandmarks.html" class="btn-outline" style="padding: 12px 30px; text-decoration: none;">Cancel</a>
+          </div>
+
+        </form>
+      </div>
+      
+    </div>
+  </main>
+
+  <script src="../JS/adminAddLandmark.js"></script>
+</body>
+</html>

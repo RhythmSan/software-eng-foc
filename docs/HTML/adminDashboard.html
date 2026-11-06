@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — HeritageGo Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/adminDashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <img src="../Images/logos/malolos logo.png" alt="Logo" class="admin-brand-logo">
+      <div class="admin-brand-text">
+        <span class="brand-title">HeritageGo</span>
+        <span class="brand-subtitle">ADMIN PORTAL</span>
+      </div>
+    </div>
+    <nav class="admin-nav">
+      <a href="adminDashboard.html" class="admin-nav-item active">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Dashboard
+      </a>
+      <a href="adminLandmarks.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Landmarks
+      </a>
+      <a href="adminEvents.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Events & schedules
+      </a>
+      <a href="adminReviews.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Reviews
+      </a>
+      <a href="adminReports.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        Reports
+      </a>
+    </nav>
+    <div class="admin-sidebar-bottom">
+      <div class="admin-profile">
+        <div class="admin-avatar">AD</div>
+        <div class="admin-profile-info">
+          <span class="admin-name">Administrator</span>
+          <span class="admin-email">admin@heritagego.ph</span>
+        </div>
+      </div>
+      <button class="admin-signout-btn" id="adminSignOutBtn">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-page-header">
+      <h1>Dashboard</h1>
+      <p>Overview of landmarks, visitor activity and reviews.</p>
+      <span class="admin-sample-text">Sample data for the prototype.</span>
+    </header>
+
+    <div class="admin-stats-grid">
+      <div class="admin-stat-card">
+        <span class="stat-label">Registered users</span>
+        <span class="stat-value">248</span>
+        <span class="stat-desc">Visitors with an account</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="stat-label">Landmarks</span>
+        <span class="stat-value">5</span>
+        <span class="stat-desc">5 published</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="stat-label">Check-ins (30 days)</span>
+        <span class="stat-value">412</span>
+        <span class="stat-desc">Inside landmark boundaries</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="stat-label">Reviews to moderate</span>
+        <span class="stat-value">3</span>
+        <span class="stat-desc">Waiting for a decision</span>
+      </div>
+    </div>
+
+    <div class="admin-middle-grid">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <div>
+            <h2>Check-ins by landmark</h2>
+            <span class="card-sub">Last 30 days</span>
+          </div>
+          <a href="#" class="admin-link">Full report</a>
+        </div>
+        <div class="admin-bar-chart">
+          <div class="chart-row">
+            <span class="chart-label">Barasoain Church</span>
+            <div class="chart-bar-wrap"><div class="chart-bar" style="width: 100%;"></div></div>
+            <span class="chart-value">148</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">Casa Real Shrine</span>
+            <div class="chart-bar-wrap"><div class="chart-bar" style="width: 65%;"></div></div>
+            <span class="chart-value">96</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">Malolos Cathedral</span>
+            <div class="chart-bar-wrap"><div class="chart-bar" style="width: 55%;"></div></div>
+            <span class="chart-value">82</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">Paseo del Congreso</span>
+            <div class="chart-bar-wrap"><div class="chart-bar" style="width: 30%;"></div></div>
+            <span class="chart-value">45</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">Kamestizuhan District</span>
+            <div class="chart-bar-wrap"><div class="chart-bar" style="width: 28%;"></div></div>
+            <span class="chart-value">41</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h2>Recent activity</h2>
+        </div>
+        <div class="admin-activity-list">
+          <div class="activity-item">
+            <div class="activity-avatar">M</div>
+            <div class="activity-content"><p><strong>Maria S.</strong> checked in at Barasoain Church</p></div>
+            <span class="activity-time">10 min ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-avatar">J</div>
+            <div class="activity-content"><p><strong>Juan D.</strong> posted a 5-star review for Casa Real Shrine</p></div>
+            <span class="activity-time">1 hr ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-avatar">A</div>
+            <div class="activity-content"><p><strong>Ana R.</strong> added Malolos Cathedral to a bucket list</p></div>
+            <span class="activity-time">3 hrs ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-avatar">L</div>
+            <div class="activity-content"><p><strong>Luis P.</strong> posted a review that needs moderation</p></div>
+            <span class="activity-time">5 hrs ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-avatar">K</div>
+            <div class="activity-content"><p><strong>Karla T.</strong> created an account</p></div>
+            <span class="activity-time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-quick-actions">
+      <div class="qa-text">
+        <h3>Quick actions</h3>
+        <p>Common tasks for keeping heritage information up to date.</p>
+      </div>
+      <div class="qa-buttons">
+        <a href="adminAddLandmark.html" class="admin-btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Add a landmark</a>
+        <a href="adminAddEvents.html" class="admin-btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Add an event</a>
+        <a href="adminReviews.html" class="admin-btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Moderate reviews</a>
+      </div>
+    </div>
+  </main>
+  <script src="../JS/adminDashboard.js"></script>
+</body>
+</html>
