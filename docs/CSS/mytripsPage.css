@@ -12,7 +12,7 @@
   --text-dark: #263238;
   --text-light: #F7F5EF;
   --accent-green: #D6AD55;
-  --border-subtle: #E8E7E2;        
+  --border-subtle: #E8E7E2;
   --radius-md: 12px;
   --radius-lg: 24px;
   --font-serif: 'DM Serif Display', serif;
@@ -25,12 +25,24 @@ body {
   color: var(--text-dark);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  padding: 24px 20px 100px;
+  padding: 24px 0 0;
   min-height: 100vh;
 }
 
-/* ========== HEADER ========== */
+/* ========== PAGE CONTAINER ========== */
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+@media (min-width: 720px) {
+  .page-wrap {
+    padding: 0 40px;
+  }
+}
+
+/* ========== HEADER ========== */
 
 /* ========== HAMBURGER  ========== */
 .trips-title-row .hamburger {
@@ -122,14 +134,13 @@ body {
   gap: 16px;
 }
 
-
 .progress-icon {
   flex-shrink: 0;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: var(--accent-green);  
-  color: var(--bg-dark-green);              
+  background-color: var(--accent-green);
+  color: var(--bg-dark-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,7 +188,7 @@ body {
 
 .progress-fill {
   height: 100%;
-  background-color: var(--accent-green);  
+  background-color: var(--accent-green);
   border-radius: 20px;
   transition: width 0.5s ease;
 }
@@ -186,17 +197,17 @@ body {
 .trips-toggle {
   display: flex;
   background-color: #fff;
-  border: 1.5px solid var(--bg-dark-green);   
+  border: 1.5px solid var(--bg-dark-green);
   border-radius: 50px;
   padding: 5px;
   margin-bottom: 20px;
-  gap: 4px;                                   
+  gap: 4px;
 }
 
 .toggle-pill {
   flex: 1;
   padding: 12px 16px;
-  border: 1.5px solid transparent;            
+  border: 1.5px solid transparent;
   background: transparent;
   font-family: var(--font-sans);
   font-size: 0.9rem;
@@ -215,8 +226,9 @@ body {
 
 .toggle-pill:hover:not(.active) {
   color: var(--bg-dark-green);
-  border-color: var(--bg-dark-green);         
+  border-color: var(--bg-dark-green);
 }
+
 /* ========== TRIP LIST ========== */
 .trips-list {
   display: flex;
@@ -236,7 +248,7 @@ body {
   text-decoration: none;
   color: inherit;
   transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
-  flex-wrap: wrap;                  
+  flex-wrap: wrap;
 }
 
 .trip-card:hover {
@@ -255,20 +267,20 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  position: relative;            
+  position: relative;
 }
 
 .trip-thumb-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;           
-  inset: 0;                     
+  position: absolute;
+  inset: 0;
 }
 
 .trip-info {
-  flex: 1;            
-  min-width: 0;       
+  flex: 1;
+  min-width: 0;
 }
 
 .trip-name {
@@ -298,11 +310,12 @@ body {
   font-size: 1.1rem;
   transition: transform 0.15s, background 0.2s;
 }
+
 .trip-walk-icon {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  filter: brightness(0) invert(1);   
+  filter: brightness(0) invert(1);
 }
 
 .trip-walk-btn:hover { background-color: #143a21; transform: scale(1.05); }
@@ -459,12 +472,26 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* ========== Trip thumb ========== */
+/* ========== Sidebar active ========== */
+.sidebar-link.is-active {
+  color: var(--accent-green);
+}
+
+.sidebar-link.is-active .sidebar-icon-img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(50%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
+}
+
+.sidebar-link.is-active:hover {
+  background-color: rgba(214, 173, 85, 0.15);
+  color: var(--accent-green);
+}
+
+/* ========== Trip thumb mini-graphic ========== */
 .trip-thumb .mini-graphic {
   display: none;
   width: 34px;
   height: 24px;
-  background-color: var(--accent-green);       
+  background-color: var(--accent-green);
   clip-path: polygon(
     0% 100%, 0% 40%, 20% 40%, 20% 20%, 40% 20%,
     40% 40%, 60% 40%, 60% 20%, 80% 20%, 80% 40%,
@@ -485,39 +512,9 @@ body {
   border-radius: 4px 4px 0 0;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (min-width: 720px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 40px 100px;
-  }
-
-  .bottom-nav {
-    max-width: 1200px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 20px 20px 0 0;
-  }
-}
-
-/* ========== Sidebar ========== */
-.sidebar-link.is-active {
-  color: var(--accent-green);
-}
-
-.sidebar-link.is-active .sidebar-icon-img {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(50%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
-}
-
-.sidebar-link.is-active:hover {
-  background-color: rgba(214, 173, 85, 0.15);
-  color: var(--accent-green);
-}
-
 /* ========== Trip card actions ========== */
 .trip-actions {
-  flex: 1 0 100%;                     
+  flex: 1 0 100%;
   display: flex;
   gap: 8px;
   margin-top: 4px;
@@ -540,7 +537,6 @@ body {
 
 .trip-btn:active { transform: scale(0.97); }
 
-/* Walk there — filled navy */
 .trip-btn--walk {
   background-color: var(--bg-dark-green);
   border-color: var(--bg-dark-green);
@@ -551,13 +547,11 @@ body {
   border-color: #0F2A3F;
 }
 
-/* Details — outline navy */
 .trip-btn--details:hover {
   background-color: rgba(23, 59, 87, 0.06);
   border-color: var(--bg-dark-green);
 }
 
-/* Remove — outline red */
 .trip-btn--remove {
   color: #B83232;
   border-color: #B83232;
@@ -565,4 +559,74 @@ body {
 .trip-btn--remove:hover {
   background-color: #F6E4E1;
   border-color: #B83232;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 720px) {
+  .bottom-nav {
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+/* ========== MALOLOS LOGO ========== */
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.footer-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .logo-img        { width: 30px !important; height: 30px !important; }
+  .footer-logo-img { width: 32px !important; height: 32px !important; }
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: var(--bg-dark-green);
+  color: var(--text-light);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 720px) {
+  .footer-inner { padding: 0 40px; }
+}
+
+.footer-text {
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  color: #c0d6b8;
+  max-width: 560px;
+  text-align: right;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-text { text-align: center; }
 }

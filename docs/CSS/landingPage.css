@@ -1106,6 +1106,28 @@ a.card {
   margin-top: 0;
 }
 
+
+/* ========== MALOLOS LOGO  ========== */
+.logo img {
+  width: 80px ;
+  height: 80px ;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.footer-logo-img {
+  width: 100px;      
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .logo-img       { width: 30px !important; height: 30px !important; }
+  .footer-logo-img{ width: 32px !important; height: 32px !important; }
+}
 /* Responsive */
 @media (max-width: 900px) {
   .explore-layout {

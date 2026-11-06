@@ -6,13 +6,13 @@
 }
 
 :root {
-  --bg-cream: #F7F5EF;             
-  --bg-dark-green: #173B57;         
-  --bg-card-cream: #FFFFFF;      
-  --text-dark: #263238;            
-  --text-light: #F7F5EF;           
-  --accent-green: #D6AD55;         
-  --border-subtle: #E8E7E2;     
+  --bg-cream: #F7F5EF;
+  --bg-dark-green: #173B57;
+  --bg-card-cream: #FFFFFF;
+  --text-dark: #263238;
+  --text-light: #F7F5EF;
+  --accent-green: #D6AD55;
+  --border-subtle: #E8E7E2;
   --radius-md: 12px;
   --radius-lg: 24px;
   --font-serif: 'DM Serif Display', serif;
@@ -25,8 +25,21 @@ body {
   color: var(--text-dark);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  padding: 24px 20px 60px;
+  padding: 24px 0 0;
   min-height: 100vh;
+}
+
+/* ========== PAGE CONTAINER ========== */
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 720px) {
+  .page-wrap {
+    padding: 0 40px;
+  }
 }
 
 /* ========== HEADER ========== */
@@ -113,12 +126,12 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: #F7F5EF;             
-  color: var(--bg-dark-green);            
+  background-color: #F7F5EF;
+  color: var(--bg-dark-green);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--accent-green);  
+  border: 3px solid var(--accent-green);
 }
 
 .profile-info {
@@ -154,7 +167,7 @@ body {
 
 .stat-card {
   background-color: #fff;
-  border: 1.5px solid var(--accent-green);  
+  border: 1.5px solid var(--accent-green);
   border-radius: var(--radius-md);
   padding: 16px 12px;
   text-decoration: none;
@@ -174,7 +187,7 @@ body {
 }
 
 .stat-icon {
-  color: var(--accent-green);            
+  color: var(--accent-green);
   flex-shrink: 0;
 }
 
@@ -190,7 +203,7 @@ body {
 
 .stat-label {
   font-size: 0.75rem;
-  color: var(--bg-dark-green);              
+  color: var(--bg-dark-green);
   font-weight: 500;
 }
 
@@ -225,12 +238,12 @@ body {
 .menu-item:hover { background-color: #f7faf3; }
 
 .menu-icon {
-  color: var(--bg-dark-green);               
+  color: var(--bg-dark-green);
   flex-shrink: 0;
 }
 
 .menu-item > span:nth-of-type(1) {
-  flex: 1;                                   
+  flex: 1;
 }
 
 .menu-arrow {
@@ -244,12 +257,12 @@ body {
   width: 100%;
   padding: 16px 20px;
   background-color: #fff;
-  border: 1.5px solid var(--bg-dark-green); 
+  border: 1.5px solid var(--bg-dark-green);
   border-radius: 50px;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 600;
-  color: #B83232;                            
+  color: #B83232;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
   display: inline-flex;
@@ -259,14 +272,12 @@ body {
 }
 
 .sign-out-btn:hover {
-  background-color: #F6E4E1;                 
+  background-color: #F6E4E1;
   border-color: #B83232;
   color: #B83232;
 }
 
-.sign-out-btn svg {
-  flex-shrink: 0;
-}
+.sign-out-btn svg { flex-shrink: 0; }
 
 /* ========== SIDEBAR OVERLAY ========== */
 .sidebar-overlay {
@@ -352,7 +363,7 @@ body {
   color: #fff;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .sidebar-link:hover {
@@ -367,8 +378,7 @@ body {
   filter: brightness(0) invert(1);
 }
 
-
-/* ========== Sidebar ========== */
+/* ========== Sidebar active ========== */
 .sidebar-link.is-active {
   color: var(--accent-green);
 }
@@ -380,14 +390,6 @@ body {
 .sidebar-link.is-active:hover {
   background-color: rgba(214, 173, 85, 0.15);
   color: var(--accent-green);
-}
-/* ========== RESPONSIVE ========== */
-@media (min-width: 720px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 40px 60px;
-  }
 }
 
 /* ==================================================
@@ -428,9 +430,7 @@ body {
 /* ==================================================
    RIGHT PANELS
    ================================================== */
-.account-panels {
-  position: relative;
-}
+.account-panels { position: relative; }
 
 .panel {
   display: none;
@@ -473,31 +473,8 @@ body {
   border-radius: 2px;
 }
 
-/* Back button in panels 
-.panel-back {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 1.5px solid var(--bg-dark-green);
-  color: var(--bg-dark-green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.panel-back:hover {
-  background-color: rgba(23, 59, 87, 0.06);
-  transform: scale(1.05);
-}*/
-
 /* ==================================================
-   FORM FIELDS (edit profile + password)
+   FORM FIELDS
    ================================================== */
 .edit-form {
   display: flex;
@@ -541,11 +518,8 @@ body {
   min-width: 0;
 }
 
-.edit-input::placeholder {
-  color: #64727B;
-}
+.edit-input::placeholder { color: #64727B; }
 
-/* Helper + feedback messages */
 .form-hint {
   font-size: 0.8rem;
   color: #64727B;
@@ -561,7 +535,6 @@ body {
 .form-message.error   { color: #B83232; }
 .form-message.success { color: #426B51; }
 
-/* Generic pill button used in panels */
 .panel-btn {
   align-self: flex-start;
   padding: 14px 32px;
@@ -646,10 +619,7 @@ body {
   margin-bottom: 14px;
 }
 
-.review-card-actions {
-  display: flex;
-  gap: 10px;
-}
+.review-card-actions { display: flex; gap: 10px; }
 
 .review-action {
   flex: 1;
@@ -793,4 +763,64 @@ body {
   }
   .account-side { order: 1; }
   .account-panels { order: 2; }
+}
+
+/* ========== MALOLOS LOGO ========== */
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.footer-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .logo-img        { width: 30px !important; height: 30px !important; }
+  .footer-logo-img { width: 32px !important; height: 32px !important; }
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: var(--bg-dark-green);
+  color: var(--text-light);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 720px) {
+  .footer-inner { padding: 0 40px; }
+}
+
+.footer-text {
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  color: #c0d6b8;
+  max-width: 560px;
+  text-align: right;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-text { text-align: center; }
 }

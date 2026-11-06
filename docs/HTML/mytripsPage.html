@@ -11,13 +11,14 @@
 </head>
 <body>
 
-   <!-- ========== SIDEBAR OVERLAY ========== -->
+  <!-- ========== SIDEBAR OVERLAY ========== -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- ========== SIDEBAR ========== -->
   <aside class="sidebar" id="sidebar" aria-hidden="true">
     <div class="sidebar-header">
       <div class="logo">
+        <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
         <span class="logo-text">HeritageGo</span>
       </div>
       <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
@@ -39,59 +40,78 @@
     </nav>
   </aside>
 
-  <!-- ========== TOP HEADER ========== -->
-  <header class="trips-header">
-    <div class="trips-title-row">
-      <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
-        <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span class="logo-text">HeritageGo</span>
+  <!-- ========== PAGE CONTENT ========== -->
+  <div class="page-wrap">
+
+    <!-- ========== TOP HEADER ========== -->
+    <header class="trips-header">
+      <div class="trips-title-row">
+        <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+          <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="logo-text">HeritageGo</span>
+        </div>
       </div>
+
+      <h1>My Trips</h1>
+      <p class="trips-sub">
+        <span class="cloud-icon">☁</span>
+        Synced to your account
+      </p>
+    </header>
+
+    <!-- ========== PROGRESS CARD ========== -->
+    <section class="progress-card">
+      <div class="progress-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+      </div>
+
+      <div class="progress-content">
+        <p class="progress-label">Heritage progress</p>
+        <p class="progress-count">
+          <span class="progress-num" id="visitedCount">2</span>
+          <span class="progress-total">of <span id="totalCount">5</span> landmarks visited</span>
+        </p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 40%;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TOGGLE ========== -->
+    <div class="trips-toggle">
+      <button class="toggle-pill active" data-view="bucket">
+        Bucket list (<span id="bucketCount">3</span>)
+      </button>
+      <button class="toggle-pill" data-view="visited">
+        Visited (<span id="visitedTabCount">2</span>)
+      </button>
     </div>
 
-    <h1>My Trips</h1>
-    <p class="trips-sub">
-      <span class="cloud-icon">☁</span>
-      Synced to your account
-    </p>
-  </header>
-  <!-- ========== PROGRESS CARD ========== -->
-  <section class="progress-card">
-  <div class="progress-icon" aria-hidden="true">
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-    </svg>
+    <!-- ========== TRIP LIST ========== -->
+    <main class="trips-list" id="tripsList">
+      <!-- Cards rendered by JS -->
+    </main>
+
   </div>
 
-  <div class="progress-content">
-    <p class="progress-label">Heritage progress</p>
-    <p class="progress-count">
-      <span class="progress-num" id="visitedCount">2</span>
-      <span class="progress-total">of <span id="totalCount">5</span> landmarks visited</span>
-    </p>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill" style="width: 40%;"></div>
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="footer-logo-img">
+      <p class="footer-text">
+        2026 MitoDoesCode // https://github.com/MitoDoCode
+        <br>
+        2026 IdreDev // https://github.com/IdreDev
+      </p>
     </div>
-  </div>
-</section>
-
-  <!-- ========== TOGGLE ========== -->
-  <div class="trips-toggle">
-    <button class="toggle-pill active" data-view="bucket">
-      Bucket list (<span id="bucketCount">3</span>)
-    </button>
-    <button class="toggle-pill" data-view="visited">
-      Visited (<span id="visitedTabCount">2</span>)
-    </button>
-  </div>
-
-  <!-- ========== TRIP LIST ========== -->
-  <main class="trips-list" id="tripsList">
-    <!-- Cards rendered by JS -->
-  </main>
+  </footer>
 
   <script src="../JS/landingpageSidebar.js"></script>
   <script src="../JS/mytripsPage.js"></script>

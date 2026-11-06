@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../CSS/accountPage.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-</head><body>
+</head>
+<body>
 
   <!-- ========== SIDEBAR OVERLAY ========== -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -17,6 +18,7 @@
   <aside class="sidebar" id="sidebar" aria-hidden="true">
     <div class="sidebar-header">
       <div class="logo">
+        <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
         <span class="logo-text">HeritageGo</span>
       </div>
       <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
@@ -38,249 +40,268 @@
     </nav>
   </aside>
 
-  <!-- ========== HEADER ========== -->
-  <header class="account-header">
-    <div class="account-title-row">
-      <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
-        <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span class="logo-text">HeritageGo</span>
+  <!-- ========== PAGE CONTENT ========== -->
+  <div class="page-wrap">
+
+    <!-- ========== HEADER ========== -->
+    <header class="account-header">
+      <div class="account-title-row">
+        <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+          <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="logo-text">HeritageGo</span>
+        </div>
       </div>
-    </div>
 
-    <h1>Account</h1>
-  </header>
+      <h1>Account</h1>
+    </header>
 
-  <!-- ========== TWO-COLUMN LAYOUT ========== -->
-  <div class="account-wrap">
+    <!-- ========== TWO-COLUMN LAYOUT ========== -->
+    <div class="account-wrap">
 
-    <!-- ========== LEFT COLUMN ========== -->
-    <div class="account-side">
+      <!-- ========== LEFT COLUMN ========== -->
+      <div class="account-side">
 
-      <!-- Profile card -->
-      <section class="profile-card">
-        <div class="profile-avatar" id="profileAvatar">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-        </div>
-        <div class="profile-info">
-          <p class="profile-name" id="profileName">Your name</p>
-          <p class="profile-email" id="profileEmail">you@example.com</p>
-        </div>
-      </section>
-
-      <!-- Stats row -->
-      <section class="stats-row">
-        <a href="mytripsPage.html?view=visited" class="stat-card">
-          <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-          </svg>
-          <span class="stat-num" id="statVisited">2</span>
-          <span class="stat-label">Visited</span>
-        </a>
-        <a href="mytripsPage.html?view=bucket" class="stat-card">
-          <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-          <span class="stat-num" id="statBucket">3</span>
-          <span class="stat-label">Bucket list</span>
-        </a>
-        <a href="#" class="stat-card" data-action="my-reviews">
-          <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span class="stat-num" id="statReviews">2</span>
-          <span class="stat-label">Reviews</span>
-        </a>
-      </section>
-
-      <!-- Menu list -->
-      <nav class="menu-list">
-        <button class="menu-item is-active" data-action="edit-profile" type="button">
-          <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span>Edit profile</span>
-          <span class="menu-arrow">›</span>
-        </button>
-
-        <button class="menu-item" data-action="my-reviews" type="button">
-          <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-          <span>My reviews</span>
-          <span class="menu-arrow">›</span>
-        </button>
-
-        <button class="menu-item" data-action="change-password" type="button">
-          <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-          <span>Change password</span>
-          <span class="menu-arrow">›</span>
-        </button>
-
-        <button class="menu-item" data-action="about" type="button">
-          <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="16" x2="12" y2="12"/>
-            <line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-          <span>About HeritageGo</span>
-          <span class="menu-arrow">›</span>
-        </button>
-      </nav>
-
-      <!-- Sign out -->
-      <button class="sign-out-btn" id="signOutBtn" type="button">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-          <polyline points="16 17 21 12 16 7"/>
-          <line x1="21" y1="12" x2="9" y2="12"/>
-        </svg>
-        <span>Sign out</span>
-      </button>
-
-    </div>
-
-    <!-- ========== RIGHT COLUMN — PANELS ========== -->
-    <div class="account-panels">
-
-      <!-- ===== PANEL: EDIT PROFILE ===== -->
-      <section class="panel is-open" data-panel="edit-profile">
-        <h2 class="panel-title">Edit profile</h2>
-
-        <form class="edit-form" id="editForm" novalidate>
-
-          <div class="edit-field">
-            <span class="edit-field-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-            </span>
-            <input type="text" id="editName" class="edit-input" placeholder="Your Name" autocomplete="name">
-          </div>
-
-          <div class="edit-field">
-            <span class="edit-field-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
-                <polyline points="3 7 12 13 21 7"/>
-              </svg>
-            </span>
-            <input type="email" id="editEmail" class="edit-input" placeholder="youremail@email.com" autocomplete="email">
-          </div>
-
-          <p class="form-message" id="editMessage"></p>
-
-          <button type="submit" class="panel-btn" id="editSave">Save changes</button>
-        </form>
-      </section>
-
-      <!-- ===== PANEL: MY REVIEWS ===== -->
-            <section class="panel" data-panel="my-reviews">
-        <h2 class="panel-title">My reviews</h2>
-
-        <div class="reviews-stack" id="reviewsStack">
-          <!-- Rendered by JS -->
-        </div>
-      </section>
-
-      <!-- ===== PANEL: CHANGE PASSWORD ===== -->
-           <section class="panel" data-panel="change-password">
-        <h2 class="panel-title">Change password</h2>
-
-        <form class="edit-form" id="passwordForm" novalidate>
-
-          <div class="edit-field">
-            <span class="edit-field-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </span>
-            <input type="password" id="currentPassword" class="edit-input" placeholder="Current password" autocomplete="current-password">
-          </div>
-
-          <div class="edit-field">
-            <span class="edit-field-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </span>
-            <input type="password" id="newPassword" class="edit-input" placeholder="New password" autocomplete="new-password">
-          </div>
-
-          <div class="edit-field">
-            <span class="edit-field-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </span>
-            <input type="password" id="confirmPassword" class="edit-input" placeholder="Confirm new password" autocomplete="new-password">
-          </div>
-
-          <p class="form-hint">Use at least 8 characters with a mix of letters and numbers.</p>
-          <p class="form-message" id="passwordMessage"></p>
-
-          <button type="submit" class="panel-btn" id="passwordSave">Update password</button>
-        </form>
-      </section>
-
-      <!-- ===== PANEL: ABOUT ===== -->
-            <section class="panel" data-panel="about">
-        <div class="about-hero">
-          <div class="about-logo">
+        <!-- Profile card -->
+        <section class="profile-card">
+          <div class="profile-avatar" id="profileAvatar">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
-              <path d="M12 2L2 9v13h6v-8h8v8h6V9z"/>
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
             </svg>
           </div>
+          <div class="profile-info">
+            <p class="profile-name" id="profileName">Your name</p>
+            <p class="profile-email" id="profileEmail">you@example.com</p>
+          </div>
+        </section>
 
-          <h2 class="about-title">HeritageGO</h2>
-          <p class="about-version">Version 1.0 • Malolos City</p>
+        <!-- Stats row -->
+        <section class="stats-row">
+          <a href="mytripsPage.html?view=visited" class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span class="stat-num" id="statVisited">2</span>
+            <span class="stat-label">Visited</span>
+          </a>
+          <a href="mytripsPage.html?view=bucket" class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span class="stat-num" id="statBucket">3</span>
+            <span class="stat-label">Bucket list</span>
+          </a>
+          <a href="#" class="stat-card" data-action="my-reviews">
+            <svg class="stat-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span class="stat-num" id="statReviews">2</span>
+            <span class="stat-label">Reviews</span>
+          </a>
+        </section>
 
-          <p class="about-desc">
-            HeritageGO helps visitors discover and explore the historical and cultural
-            landmarks of Malolos City, Bulacan. Search places, save a bucket list,
-            check in on arrival, share ratings and follow walking routes.
-          </p>
+        <!-- Menu list -->
+        <nav class="menu-list">
+          <button class="menu-item is-active" data-action="edit-profile" type="button">
+            <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>Edit profile</span>
+            <span class="menu-arrow">›</span>
+          </button>
 
-          <div class="about-info">
-            <div class="about-info-row">
-              <span class="about-info-label">Data sources</span>
-              <span class="about-info-value">Geoapify • OpenStreetMap</span>
+          <button class="menu-item" data-action="my-reviews" type="button">
+            <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>My reviews</span>
+            <span class="menu-arrow">›</span>
+          </button>
+
+          <button class="menu-item" data-action="change-password" type="button">
+            <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Change password</span>
+            <span class="menu-arrow">›</span>
+          </button>
+
+          <button class="menu-item" data-action="about" type="button">
+            <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span>About HeritageGo</span>
+            <span class="menu-arrow">›</span>
+          </button>
+        </nav>
+
+        <!-- Sign out -->
+        <button class="sign-out-btn" id="signOutBtn" type="button">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          <span>Sign out</span>
+        </button>
+
+      </div>
+
+      <!-- ========== RIGHT COLUMN — PANELS ========== -->
+      <div class="account-panels">
+
+        <!-- ===== PANEL: EDIT PROFILE ===== -->
+        <section class="panel is-open" data-panel="edit-profile">
+          <h2 class="panel-title">Edit profile</h2>
+
+          <form class="edit-form" id="editForm" novalidate>
+
+            <div class="edit-field">
+              <span class="edit-field-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+              <input type="text" id="editName" class="edit-input" placeholder="Your Name" autocomplete="name">
             </div>
-            <div class="about-info-row">
-              <span class="about-info-label">Cloud sync</span>
-              <span class="about-info-value">Firebase Realtime Database</span>
+
+            <div class="edit-field">
+              <span class="edit-field-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                  <polyline points="3 7 12 13 21 7"/>
+                </svg>
+              </span>
+              <input type="email" id="editEmail" class="edit-input" placeholder="youremail@email.com" autocomplete="email">
             </div>
-            <div class="about-info-row">
-              <span class="about-info-label">Project</span>
-              <span class="about-info-value">Academic thesis • Bulacan State University</span>
+
+            <p class="form-message" id="editMessage"></p>
+
+            <button type="submit" class="panel-btn" id="editSave">Save changes</button>
+          </form>
+        </section>
+
+        <!-- ===== PANEL: MY REVIEWS ===== -->
+        <section class="panel" data-panel="my-reviews">
+          <h2 class="panel-title">My reviews</h2>
+
+          <div class="reviews-stack" id="reviewsStack">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- ===== PANEL: CHANGE PASSWORD ===== -->
+        <section class="panel" data-panel="change-password">
+          <h2 class="panel-title">Change password</h2>
+
+          <form class="edit-form" id="passwordForm" novalidate>
+
+            <div class="edit-field">
+              <span class="edit-field-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" id="currentPassword" class="edit-input" placeholder="Current password" autocomplete="current-password">
+            </div>
+
+            <div class="edit-field">
+              <span class="edit-field-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" id="newPassword" class="edit-input" placeholder="New password" autocomplete="new-password">
+            </div>
+
+            <div class="edit-field">
+              <span class="edit-field-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" id="confirmPassword" class="edit-input" placeholder="Confirm new password" autocomplete="new-password">
+            </div>
+
+            <p class="form-hint">Use at least 8 characters with a mix of letters and numbers.</p>
+            <p class="form-message" id="passwordMessage"></p>
+
+            <button type="submit" class="panel-btn" id="passwordSave">Update password</button>
+          </form>
+        </section>
+
+        <!-- ===== PANEL: ABOUT ===== -->
+        <section class="panel" data-panel="about">
+          <div class="about-hero">
+            <div class="about-logo">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L2 9v13h6v-8h8v8h6V9z"/>
+              </svg>
+            </div>
+
+            <h2 class="about-title">HeritageGO</h2>
+            <p class="about-version">Version 1.0 • Malolos City</p>
+
+            <p class="about-desc">
+              HeritageGO helps visitors discover and explore the historical and cultural
+              landmarks of Malolos City, Bulacan. Search places, save a bucket list,
+              check in on arrival, share ratings and follow walking routes.
+            </p>
+
+            <div class="about-info">
+              <div class="about-info-row">
+                <span class="about-info-label">Data sources</span>
+                <span class="about-info-value">Geoapify • OpenStreetMap</span>
+              </div>
+              <div class="about-info-row">
+                <span class="about-info-label">Cloud sync</span>
+                <span class="about-info-value">Firebase Realtime Database</span>
+              </div>
+              <div class="about-info-row">
+                <span class="about-info-label">Project</span>
+                <span class="about-info-value">Academic thesis • Bulacan State University</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <button class="panel-btn panel-btn--ghost" type="button" id="termsBtn">Terms of use</button>
+              <button class="panel-btn panel-btn--ghost" type="button" id="privacyBtn">Privacy policy</button>
             </div>
           </div>
+        </section>
 
-          <div class="about-actions">
-            <button class="panel-btn panel-btn--ghost" type="button" id="termsBtn">Terms of use</button>
-            <button class="panel-btn panel-btn--ghost" type="button" id="privacyBtn">Privacy policy</button>
-          </div>
-        </div>
-      </section>
+      </div>
 
     </div>
 
   </div>
 
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="footer-logo-img">
+      <p class="footer-text">
+        2026 MitoDoesCode // https://github.com/MitoDoCode
+        <br>
+        2026 IdreDev // https://github.com/IdreDev
+      </p>
+    </div>
+  </footer>
+
   <script src="../JS/landingpageSidebar.js"></script>
   <script src="../JS/accountPage.js"></script>
 </body>
+</html>
