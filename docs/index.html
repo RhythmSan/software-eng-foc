@@ -6,7 +6,7 @@
   <title>HeritageGo — Malolos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="../CSS/landingPage.css">
+  <link rel="stylesheet" href="CSS/landingPage.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,52 +14,49 @@
   <!-- ========== HEADER ========== -->
   <header class="site-header">
 
-   <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
-  <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
-  <span class="hamburger" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-  <span class="logo-text">HeritageGo</span>
-</div>
+    <div class="logo" id="logoBtn" role="button" tabindex="0" aria-label="Open menu">
+      <span class="hamburger" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="logo-text">HeritageGo</span>
+    </div>
 
     <nav class="main-nav">
-  <a href="#explore">Landmarks</a>
-  <a href="#features">Features</a>
-  <a href="#map">Map</a>
-  <a href="login&signupPage.html" class="btn-login">Log in</a>
-</nav>
+      <a href="#explore">Landmarks</a>
+      <a href="#features">Features</a>
+      <a href="#map">Map</a>
+      <a href="HTML/login&signupPage.html" class="btn-login">Log in</a>
+    </nav>
   </header>
 
   <!-- ========== SIDEBAR ========== -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <aside class="sidebar" id="sidebar" aria-hidden="true">
-
     <div class="sidebar-header">
-  <div class="logo">
-    <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="logo-img">
-    <span class="logo-text">HeritageGo</span>
-  </div>
-  <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
-</div>
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">HeritageGo</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+    </div>
 
     <nav class="sidebar-nav">
-  <a href="landingPage.html" class="sidebar-link" data-page="explore">
-    <img src="../Images/logos/compass.png" alt="" class="sidebar-icon-img">
-    <span>Explore</span>
-  </a>
-  <a href="mytripsPage.html" class="sidebar-link" data-page="trips">
-    <img src="../Images/logos/wishlist.png" alt="" class="sidebar-icon-img">
-    <span>My Trips</span>
-  </a>
-  <a href="accountPage.html" class="sidebar-link" data-page="account">
-    <img src="../Images/logos/user.png" alt="" class="sidebar-icon-img">
-    <span>Account</span>
-  </a>
-</nav>
-
+      <a href="HTML/landingPage.html" class="sidebar-link" data-page="explore">
+        <img src="Images/logos/compass.png" alt="" class="sidebar-icon-img">
+        <span>Explore</span>
+      </a>
+      <a href="HTML/mytripsPage.html" class="sidebar-link" data-page="trips">
+        <img src="Images/logos/wishlist.png" alt="" class="sidebar-icon-img">
+        <span>My Trips</span>
+      </a>
+      <a href="HTML/accountPage.html" class="sidebar-link" data-page="account">
+        <img src="Images/logos/user.png" alt="" class="sidebar-icon-img">
+        <span>Account</span>
+      </a>
+    </nav>
   </aside>
 
   <!-- ========== HERO ========== -->
@@ -76,13 +73,6 @@
           Discover historical landmarks, parks and cultural sites. Save your bucket list, check in where you've been, and follow a walking path to your next stop.
         </p>
       </div>
- <!-- 
-      <div class="search-row">
-        <input type="text" placeholder="Search landmarks, parks, churches" class="search-input">
-        <button class="btn-primary" id="startBtn" type="button">Start exploring</button>
-      </div>
--->
-
     </div>
 
     <div class="hero-image">
@@ -96,6 +86,7 @@
       </div>
     </div>
   </section>
+
   <!-- ========== FEATURED LANDMARKS ========== -->
   <section class="featured" id="landmarks">
     <div class="section-header">
@@ -104,8 +95,7 @@
 
     <div class="card-grid" id="cardGrid">
 
-      <!-- Card 1 -->
-      <a href="placesPage.html?id=barasoain" class="card" data-category="historical">
+      <a href="HTML/placesPage.html?id=barasoain" class="card" data-category="historical">
         <div class="card-image"><div class="mini-graphic"></div></div>
         <div class="card-body">
           <span class="card-tag">Historical</span>
@@ -114,47 +104,7 @@
         </div>
       </a>
 
-      <!-- Card 2 
-      <a href="placesPage.html?id=casa-real" class="card" data-category="historical">
-        <div class="card-image"><div class="mini-graphic"></div></div>
-        <div class="card-body">
-          <span class="card-tag">Historical</span>
-          <h3>Casa Real Shrine</h3>
-          <p>Former seat of government of the First Philippine Republic.</p>
-        </div>
-      </a>-->
-
-      <!-- Card 3 
-      <a href="placesPage.html?id=malolos-cathedral" class="card" data-category="cultural">
-        <div class="card-image"><div class="mini-graphic"></div></div>
-        <div class="card-body">
-          <span class="card-tag">Cultural</span>
-          <h3>Malolos Cathedral</h3>
-          <p>The Immaculate Conception parish church at the heart of the town center.</p>
-        </div>
-      </a>-->
-
-      <!-- Card 4 
-      <a href="placesPage.html?id=paseo" class="card" data-category="parks">
-        <div class="card-image"><div class="mini-graphic"></div></div>
-        <div class="card-body">
-          <span class="card-tag">Parks</span>
-          <h3>Paseo del Congreso</h3>
-          <p>A walkable promenade connecting the heritage sites.</p>
-        </div>
-      </a>
-
-       Extra Historical 
-      <a href="placesPage.html?id=republic-shrine" class="card" data-category="historical">
-        <div class="card-image"><div class="mini-graphic"></div></div>
-        <div class="card-body">
-          <span class="card-tag">Historical</span>
-          <h3>Malolos Republic Shrine</h3>
-          <p>Marker honoring the birthplace of Asia's first republic.</p>
-        </div>
-      </a> -->
-
-      <a href="placesPage.html?id=barasoain-museum" class="card" data-category="historical">
+      <a href="HTML/placesPage.html?id=barasoain-museum" class="card" data-category="historical">
         <div class="card-image"><div class="mini-graphic"></div></div>
         <div class="card-body">
           <span class="card-tag">Historical</span>
@@ -163,8 +113,7 @@
         </div>
       </a>
 
-      <!-- Extra Cultural -->
-      <a href="placesPage.html?id=heritage-house" class="card" data-category="cultural">
+      <a href="HTML/placesPage.html?id=heritage-house" class="card" data-category="cultural">
         <div class="card-image"><div class="mini-graphic"></div></div>
         <div class="card-body">
           <span class="card-tag">Cultural</span>
@@ -173,7 +122,7 @@
         </div>
       </a>
 
-      <a href="placesPage.html?id=arts-center" class="card" data-category="cultural">
+      <a href="HTML/placesPage.html?id=arts-center" class="card" data-category="cultural">
         <div class="card-image"><div class="mini-graphic"></div></div>
         <div class="card-body">
           <span class="card-tag">Cultural</span>
@@ -182,24 +131,14 @@
         </div>
       </a>
 
-      <!-- Extra Parks 
-      <a href="placesPage.html?id=sports-complex" class="card" data-category="parks">
-        <div class="card-image"><div class="mini-graphic"></div></div>
-        <div class="card-body">
-          <span class="card-tag">Parks</span>
-          <h3>Malolos Sports Complex</h3>
-          <p>Green open space for jogging, picnics, and community events.</p>
-        </div>
-      </a>-->
-
-      <a href="placesPage.html?id=capitol-grounds" class="card" data-category="parks">
+      <a href="HTML/placesPage.html?id=capitol-grounds" class="card" data-category="parks">
         <div class="card-image"><div class="mini-graphic"></div></div>
         <div class="card-body">
           <span class="card-tag">Parks</span>
           <h3>Bulacan Provincial Capitol Grounds</h3>
           <p>Landscaped grounds and open plazas in the city center.</p>
         </div>
-      </a> 
+      </a>
 
     </div>
   </section>
@@ -227,9 +166,7 @@
     </div>
   </section>
 
-
-
-    <!-- ========== EXPLORE MALOLOS ========== -->
+  <!-- ========== EXPLORE MALOLOS ========== -->
   <section class="explore" id="explore">
     <h2 class="explore-title">Explore Malolos</h2>
     <p class="explore-sub">Search landmarks, filter by category and see them on the map.</p>
@@ -258,12 +195,10 @@
 
     <div class="explore-layout">
 
-      <!-- LEFT: landmark list -->
       <div class="explore-list" id="exploreList">
         <!-- rendered by JS -->
       </div>
 
-      <!-- RIGHT: map -->
       <div class="explore-map">
         <div class="map-canvas">
           <div class="road road-h1"></div>
@@ -288,7 +223,6 @@
 
     </div>
   </section>
-
 
   <!-- ========== MAP SECTION ========== -->
   <section class="map-section" id="map">
@@ -318,17 +252,17 @@
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="footer-inner">
-        <img src="../Images/logos/malolos logo.png" alt="Malolos Logo" class="footer-logo-img">
+      <div class="footer-logo">HeritageGo</div>
       <p class="footer-text">
-       2026 MitoDoesCode // https://github.com/MitoDoCode
-       <br>
-       2026 IdreDev // https://github.com/IdreDev
+        2026 MitoDoesCode // https://github.com/MitoDoCode
+        <br>
+        2026 IdreDev // https://github.com/IdreDev
       </p>
     </div>
   </footer>
 
-  <script src="../JS/landingPage.js"></script>
-  <script src="../JS/easteregg.js"></script>
-  <script src="../JS/landingpageSidebar.js"></script>
+  <script src="JS/landingPage.js"></script>
+  <script src="JS/easteregg.js"></script>
+  <script src="JS/landingpageSidebar.js"></script>
 </body>
 </html>
