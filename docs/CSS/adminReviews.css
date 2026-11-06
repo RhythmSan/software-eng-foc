@@ -1,0 +1,391 @@
+/* ==================================================
+   HERITAGEGO ADMIN REVIEW MODERATION PAGE
+   ================================================== */
+
+:root {
+  --navy: #173B57;
+  --navy-dark: #0F2A3F;
+  --gold: #D6AD55;
+  --cream: #F7F5EF;
+  --white: #FFFFFF;
+  --text-dark: #263238;
+  --text-muted: #64727B;
+  --border-light: #E8E7E2;
+  --sidebar-w: 260px;
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.admin-body { display: flex; min-height: 100vh; }
+
+/* ==================================================
+   SIDEBAR
+   ================================================== */
+.admin-sidebar {
+  width: var(--sidebar-w);
+  background-color: var(--navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; bottom: 0; left: 0;
+  z-index: 100;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-brand-logo {
+  width: 40px; height: 40px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.admin-brand-text { display: flex; flex-direction: column; }
+.brand-title { font-family: var(--font-serif); font-size: 1.2rem; letter-spacing: -0.01em; }
+.brand-subtitle { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.05em; font-weight: 600; }
+
+.admin-nav {
+  padding: 20px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-nav-item:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+
+.admin-nav-item.active {
+  background: var(--white);
+  color: var(--gold); 
+  font-weight: 600;
+}
+.admin-nav-item.active svg { stroke: var(--gold); }
+
+.admin-sidebar-bottom { padding: 20px 16px; border-top: 1px solid rgba(255,255,255,0.1); }
+.admin-profile { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.admin-avatar { width: 36px; height: 36px; background: var(--gold); color: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.85rem; }
+.admin-profile-info { display: flex; flex-direction: column; }
+.admin-name { font-size: 0.9rem; font-weight: 600; }
+.admin-email { font-size: 0.75rem; color: rgba(255,255,255,0.6); }
+
+.admin-signout-btn {
+  width: 100%; padding: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.admin-signout-btn:hover { background: rgba(255,255,255,0.1); }
+
+/* ==================================================
+   MAIN CONTENT
+   ================================================== */
+.admin-main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  padding: 40px;
+}
+
+.admin-page-header {
+  margin-bottom: 24px;
+}
+
+.admin-page-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+}
+
+/* Gold Underline under Title */
+.admin-page-header h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 48px;
+  height: 3px;
+  background-color: var(--gold);
+  border-radius: 2px;
+}
+
+.admin-page-header p { 
+  font-size: 0.95rem; 
+  color: var(--text-dark); 
+  margin-top: 12px; 
+}
+
+/* ==================================================
+   TABS
+   ================================================== */
+.review-tabs {
+  display: inline-flex;
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.review-tab {
+  padding: 10px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.review-tab.active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.review-tab:hover:not(.active) {
+  background: #F1F5F9;
+}
+
+/* ==================================================
+   REVIEW CARDS
+   ================================================== */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  max-width: 1000px;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Avatar */
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Content Area */
+.review-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.review-separator {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.review-landmark {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.review-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.report-warning {
+  color: #B83232;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.badge-pending {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+.badge-approved {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.badge-removed {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Stars */
+.review-stars {
+  margin-bottom: 8px;
+}
+
+.star {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.star.filled {
+  color: var(--gold);
+}
+
+.star.empty {
+  color: #E2E8F0;
+}
+
+/* Text */
+.review-text {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* ==================================================
+   ACTION BUTTONS
+   ================================================== */
+.review-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.btn-action {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-approve {
+  background: var(--navy);
+  color: var(--white);
+  border: 1.5px solid var(--navy);
+}
+
+.btn-approve:hover {
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+}
+
+.btn-remove {
+  background: transparent;
+  color: #B83232;
+  border: 1.5px solid #B83232;
+}
+
+.btn-remove:hover {
+  background: #FEF2F2;
+}
+
+/* Footnote */
+.admin-footnote {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+@media (max-width: 900px) {
+  .admin-sidebar { transform: translateX(-100%); }
+  .admin-main { margin-left: 0; padding: 20px; }
+  
+  .review-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .review-actions {
+    width: 100%;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border-light);
+    padding-top: 12px;
+  }
+}
