@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Moderation — HeritageGo Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../CSS/adminReviews.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <img src="../Images/logos/malolos logo.png" alt="Logo" class="admin-brand-logo">
+      <div class="admin-brand-text">
+        <span class="brand-title">HeritageGo</span>
+        <span class="brand-subtitle">ADMIN PORTAL</span>
+      </div>
+    </div>
+
+    <nav class="admin-nav">
+      <a href="adminDashboard.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Dashboard
+      </a>
+      <a href="adminLandmarks.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Landmarks
+      </a>
+      <a href="adminEvents.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Events & schedules
+      </a>
+      <a href="adminReviews.html" class="admin-nav-item active">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Reviews
+      </a>
+      <a href="adminReports.html" class="admin-nav-item">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="admin-sidebar-bottom">
+      <div class="admin-profile">
+        <div class="admin-avatar">AD</div>
+        <div class="admin-profile-info">
+          <span class="admin-name">Administrator</span>
+          <span class="admin-email">admin@heritagego.ph</span>
+        </div>
+      </div>
+      <button class="admin-signout-btn" id="adminSignOutBtn">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="admin-main">
+    
+    <header class="admin-page-header">
+      <h1>Review moderation</h1>
+      <p>Approve or remove visitor ratings and reviews.</p>
+    </header>
+
+    <!-- Filter Tabs -->
+    <div class="review-tabs">
+      <button class="review-tab active" data-tab="pending">Pending (3)</button>
+      <button class="review-tab" data-tab="approved">Approved (2)</button>
+      <button class="review-tab" data-tab="removed">Removed (1)</button>
+    </div>
+
+    <!-- Reviews List -->
+    <div class="reviews-container" id="reviewsContainer">
+      <!-- Rendered by JS -->
+    </div>
+
+    <p class="admin-footnote">Approved reviews are visible to visitors. Removed reviews are hidden but kept for the record. Sample data.</p>
+
+  </main>
+
+  <script src="../JS/adminReviews.js"></script>
+</body>
+</html>
