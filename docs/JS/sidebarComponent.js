@@ -1,12 +1,8 @@
 
-//   HERITAGEGO — Shared Sidebar Component
-//   Injects the sidebar into any page.
-//   Just include this script + landingpageSidebar.js
-//   and the toggle will work automatically.
+//   HERITAGEGO — Sidebar Component
+
 
 (function () {
-  // Do this immediately, BEFORE DOMContentLoaded,
-  // so the sidebar exists when other scripts look for it.
 
   function injectSidebar() {
 
@@ -24,7 +20,7 @@
       <aside class="sidebar" id="sidebar" aria-hidden="true">
         <div class="sidebar-header">
           <div class="logo">
-            <span class="logo-icon">📍</span>
+            <span class="logo-icon"></span>
             <span class="logo-text">HeritageGo</span>
           </div>
           <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
@@ -51,11 +47,11 @@
     document.body.insertAdjacentHTML('afterbegin', html);
   }
 
-  // Run immediately (before DOMContentLoaded)
+ 
   if (document.body) {
     injectSidebar();
   } else {
-    // If body doesn't exist yet (script in <head>), wait for DOM
+
     document.addEventListener('DOMContentLoaded', injectSidebar);
   }
 })();

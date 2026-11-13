@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  //   THE DATA — one entry per place
+  //
 
   const PLACES = {
     'barasoain': {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.6',
       reviews: '84 reviews',
       distance: '1.2km away',
-      image: '../Images/placeholders/casa-real.jpg',
+      image: '../Images/casa-real.jpg',
       description: 'Former seat of government of the First Philippine Republic. Now a museum housing artifacts from the revolutionary era.'
     },
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.7',
       reviews: '203 reviews',
       distance: '0.8km away',
-      image: '../Images/placeholders/malolos-cathedral.jpg',
+      image: '../Images/malolos-cathedral.jpg',
       description: 'The Immaculate Conception parish church at the heart of the town center. A major cultural and religious landmark in Bulacan.'
     },
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.5',
       reviews: '57 reviews',
       distance: '1.5km away',
-      image: '../Images/placeholders/paseo.jpg',
+      image: '../Images/paseo.jpg',
       description: 'A walkable promenade connecting the heritage sites. Popular for evening strolls and community gatherings.'
     },
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.4',
       reviews: '42 reviews',
       distance: '1.3km away',
-      image: '../Images/placeholders/republic-shrine.jpg',
+      image: '../Images/republic-shrine.jpg',
       description: "Marker honoring the birthplace of Asia's first republic."
     },
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.6',
       reviews: '66 reviews',
       distance: '1.1km away',
-      image: '../Images/placeholders/barasoain-museum.jpg',
+      image: '../Images/barasoain-museum.jpg',
       description: 'Artifacts from the revolutionary period and the Malolos Congress.'
     },
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.5',
       reviews: '38 reviews',
       distance: '0.9km away',
-      image: '../Images/placeholders/heritage-house.jpg',
+      image: '../Images/heritage-house.jpg',
       description: "Preserved ancestral home showcasing Bulacan's artistry."
     },
 
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.3',
       reviews: '24 reviews',
       distance: '1.7km away',
-      image: '../Images/placeholders/arts-center.jpg',
+      image: '../Images/arts-center.jpg',
       description: 'Local crafts, weaving, and contemporary Bulakeño art.'
     },
 
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.2',
       reviews: '31 reviews',
       distance: '2.0km away',
-      image: '../Images/placeholders/sports-complex.jpg',
+      image: '../Images/sports-complex.jpg',
       description: 'Green open space for jogging, picnics, and community events.'
     },
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rating: '4.4',
       reviews: '48 reviews',
       distance: '1.6km away',
-      image: '../Images/placeholders/capitol-grounds.jpg',
+      image: '../Images/capitol-grounds.jpg',
       description: 'Landscaped grounds and open plazas in the city center.'
     }
   };

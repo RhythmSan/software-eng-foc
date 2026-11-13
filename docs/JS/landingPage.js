@@ -3,20 +3,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ========================================================
-     1. LANDMARK DATA (shared by Explore list)
+     1. LANDMARK DATA 
      ======================================================== */
   const LANDMARKS = [
-    { id: 'barasoain',         name: 'Barasoain Church',                 category: 'historical', distance: '0.9 km', rating: 5, image: '../Images/velvetroom.jpg' },
-    { id: 'casa-real',         name: 'Casa Real Shrine',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/placeholders/casa-real.jpg' },
-    { id: 'malolos-cathedral', name: 'Malolos Cathedral',                category: 'cultural',   distance: '1.3 km', rating: 5, image: '../Images/placeholders/malolos-cathedral.jpg' },
-    { id: 'kamestizuhan',      name: 'Kamestizuhan District',            category: 'cultural',   distance: '1.6 km', rating: 5, image: '../Images/placeholders/kamestizuhan.jpg' },
-    { id: 'paseo',             name: 'Paseo del Congreso',               category: 'parks',      distance: '1.8 km', rating: 5, image: '../Images/placeholders/paseo.jpg' },
-    { id: 'republic-shrine',   name: 'Malolos Republic Shrine',          category: 'historical', distance: '1.3 km', rating: 4, image: '../Images/placeholders/republic-shrine.jpg' },
-    { id: 'barasoain-museum',  name: 'Barasoain Museum',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/placeholders/barasoain-museum.jpg' },
-    { id: 'heritage-house',    name: 'Malolos Heritage House',           category: 'cultural',   distance: '0.9 km', rating: 4, image: '../Images/placeholders/heritage-house.jpg' },
-    { id: 'arts-center',       name: 'Bulacan Arts Center',              category: 'cultural',   distance: '1.7 km', rating: 4, image: '../Images/placeholders/arts-center.jpg' },
-    { id: 'sports-complex',    name: 'Malolos Sports Complex',           category: 'parks',      distance: '2.0 km', rating: 4, image: '../Images/placeholders/sports-complex.jpg' },
-    { id: 'capitol-grounds',   name: 'Bulacan Provincial Capitol Grounds',category: 'parks',     distance: '1.6 km', rating: 4, image: '../Images/placeholders/capitol-grounds.jpg' }
+    { id: 'barasoain',         name: 'Barasoain Church',                 category: 'historical', distance: '0.9 km', rating: 5, image: '../Images/Barasoain-Church.jpg' },
+    { id: 'casa-real',         name: 'Casa Real Shrine',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/casa-real.jpg' },
+    { id: 'malolos-cathedral', name: 'Malolos Cathedral',                category: 'cultural',   distance: '1.3 km', rating: 5, image: '../Images/malolos-cathedral.jpg' },
+    { id: 'kamestizuhan',      name: 'Kamestizuhan District',            category: 'cultural',   distance: '1.6 km', rating: 5, image: '../Images/kamestizuhan.jpg' },
+    { id: 'paseo',             name: 'Paseo del Congreso',               category: 'parks',      distance: '1.8 km', rating: 5, image: '../Images/paseo.jpg' },
+    { id: 'republic-shrine',   name: 'Malolos Republic Shrine',          category: 'historical', distance: '1.3 km', rating: 4, image: '../Images/republic-shrine.jpg' },
+    { id: 'barasoain-museum',  name: 'Barasoain Museum',                 category: 'historical', distance: '1.1 km', rating: 5, image: '../Images/barasoain-museum.jpg' },
+    { id: 'heritage-house',    name: 'Malolos Heritage House',           category: 'cultural',   distance: '0.9 km', rating: 4, image: '../Images/heritage-house.jpg' },
+    { id: 'arts-center',       name: 'Bulacan Arts Center',              category: 'cultural',   distance: '1.7 km', rating: 4, image: '../Images/arts-center.jpg' },
+    { id: 'sports-complex',    name: 'Malolos Sports Complex',           category: 'parks',      distance: '2.0 km', rating: 4, image: '../Images/sports-complex.jpg' },
+    { id: 'capitol-grounds',   name: 'Bulacan Provincial Capitol Grounds',category: 'parks',     distance: '1.6 km', rating: 4, image: '../Images/capitol-grounds.jpg' }
   ];
 
   const CATEGORY_LABEL = {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ========================================================
-     2. FEATURED LANDMARKS — horizontal slider (no tabs)
+     2. FEATURED LANDMARKS
      ======================================================== */
   const grid = document.getElementById('cardGrid');
 
@@ -129,4 +129,81 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderExplore();
+
+  /* ========================================================
+     4. HERO ANNOUNCEMENTS SLIDER
+     ======================================================== */
+  const ANNOUNCEMENTS = [
+    {
+      tag: 'Upcoming',
+      title: 'Malolos Heritage Week',
+      desc: 'Join us from Sep 15 to Sep 21 for a week of cultural tours and exhibits.'
+    },
+    {
+      tag: 'Update',
+      title: 'Barasoain Church Hours',
+      desc: 'Opening hours extended to 6 PM on weekends starting this month.'
+    },
+    {
+      tag: 'Notice',
+      title: 'Free Walking Tours',
+      desc: 'Free guided walking tours are available every Saturday morning.'
+    }
+  ];
+
+  const track = document.getElementById('announcementTrack');
+  const dotsContainer = document.getElementById('announcementDots');
+  let currentIndex = 0;
+  let slideInterval;
+
+  if (track && dotsContainer) {
+    // 1. Generate the HTML for the cards
+    track.innerHTML = ANNOUNCEMENTS.map(ann => `
+      <div class="announcement-card">
+        <span class="announcement-tag">${ann.tag}</span>
+        <h3>${ann.title}</h3>
+        <p>${ann.desc}</p>
+      </div>
+    `).join('');
+
+    // 2. Generate the dots
+    dotsContainer.innerHTML = ANNOUNCEMENTS.map((_, i) => 
+      `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`
+    ).join('');
+
+    const dots = dotsContainer.querySelectorAll('.dot');
+
+    // 3. Function to move to a specific slide
+    function goToSlide(index) {
+      currentIndex = index;
+      // Move the track horizontally
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update dot active states
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    // 4. Auto-play logic
+    function startSlideShow() {
+      slideInterval = setInterval(() => {
+        let nextIndex = (currentIndex + 1) % ANNOUNCEMENTS.length;
+        goToSlide(nextIndex);
+      }, 4000); // Changes every 4 seconds
+    }
+
+    // 5. Click on dots to navigate
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(slideInterval); 
+        goToSlide(i);
+        startSlideShow();
+      });
+    });
+
+    // Start the slider
+    startSlideShow();
+  }
+
 });

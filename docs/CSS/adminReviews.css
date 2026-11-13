@@ -135,7 +135,7 @@ body {
   display: inline-block;
 }
 
-/* Gold Underline under Title */
+
 .admin-page-header h1::after {
   content: "";
   position: absolute;

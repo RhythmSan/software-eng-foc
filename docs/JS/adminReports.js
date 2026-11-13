@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Handle Filter Pill Toggles (7 days, 30 days, All time)
+  // 1. Handle Filter Pill Toggles 
   const filterPills = document.querySelectorAll('.filter-pill');
   
   filterPills.forEach(pill => {
@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       filterPills.forEach(p => p.classList.remove('active'));
       // Add active state to clicked
       pill.classList.add('active');
-      
-      // In a real app, you would fetch new data here based on the filter.
-      // For now, it's a visual toggle.
     });
   });
 
@@ -23,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear the session
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+      // Redirect back to the login page 
       window.location.href = 'admin.html';
     }
   });

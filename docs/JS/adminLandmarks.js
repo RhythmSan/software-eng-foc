@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (addLandmarkBtn) {
     addLandmarkBtn.addEventListener('click', (e) => {
-      e.preventDefault(); // Stop any default button behavior
-      window.location.href = 'adminAddLandmark.html'; // Redirect to the form
+      e.preventDefault();
+      window.location.href = 'adminAddLandmark.html'; 
     });
   }
 
@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear the session
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+      // Redirect back to the login page 
       window.location.href = 'admin.html';
     }
   });
 
-  // Initial Render
+
   renderTable();
 });

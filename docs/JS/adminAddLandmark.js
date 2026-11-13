@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Handle Filter Pill Toggles (Category & Status)
+  // 1. Handle Filter Pill Toggles 
   const pillGroups = document.querySelectorAll('.pill-group');
   
   pillGroups.forEach(group => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Since this is a prototype, we'll just simulate saving and redirect
+   
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.textContent = 'Saving...';
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sign Out Logic
   document.getElementById('adminSignOutBtn')?.addEventListener('click', () => {
     if (confirm('Sign out of the Admin Portal?')) {
-      // Clear the session
+
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page (admin.html)
+
       window.location.href = 'admin.html';
     }
   });

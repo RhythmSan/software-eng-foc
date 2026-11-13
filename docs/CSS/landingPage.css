@@ -1107,6 +1107,162 @@ a.card {
 }
 
 
+
+/* ========== HERO ANNOUNCEMENTS ========== */
+.hero-announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--bg-dark-green);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  height: 100%;
+  min-height: 400px; /* Keeps the height matching the old image */
+  justify-content: center;
+}
+
+.announcement-card {
+  background-color: var(--bg-card-cream);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-tag {
+  display: inline-block;
+  background-color: #F1E5C8;
+  color: var(--bg-dark-green);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.announcement-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--bg-dark-green);
+  margin-bottom: 6px;
+}
+
+.announcement-card p {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .hero-announcements {
+    min-height: auto;
+    padding: 24px;
+  }
+}
+
+
+/* ========== HERO ANNOUNCEMENTS SLIDER ========== */
+.hero-announcements {
+  position: relative;
+  background-color: var(--bg-dark-green);
+  border-radius: var(--radius-lg);
+  height: 400px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+}
+
+.announcement-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.announcement-card {
+  min-width: 100%; 
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-dark-green);
+  color: var(--white);
+}
+
+.announcement-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--accent-green);
+  color: var(--bg-dark-green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.announcement-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.announcement-card p {
+  font-size: 0.95rem;
+  color: #c0d6b8;
+  line-height: 1.6;
+}
+
+/* Dots */
+.announcement-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease, width 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--accent-green);
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .hero-announcements {
+    height: 300px;
+  }
+  .announcement-card {
+    padding: 24px;
+  }
+  .announcement-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+
 /* ========== MALOLOS LOGO  ========== */
 .logo img {
   width: 80px ;

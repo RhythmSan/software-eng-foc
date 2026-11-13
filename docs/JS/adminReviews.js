@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('reviewsContainer');
   const tabs = document.querySelectorAll('.review-tab');
 
-  // Function to render stars (gold for filled, gray for empty)
+  // Function to render stars
   function renderStars(count) {
     let html = '';
     for (let i = 1; i <= 5; i++) {

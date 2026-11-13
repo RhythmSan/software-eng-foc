@@ -84,7 +84,7 @@ body {
 
 .admin-nav-item:hover { background: rgba(255,255,255,0.08); color: var(--white); }
 
-/* Active Sidebar Link - GOLD */
+
 .admin-nav-item.active {
   background: var(--white);
   color: var(--gold); 
@@ -125,7 +125,7 @@ body {
   justify-content: flex-start;
 }
 
-/* Form Wrapper for left alignment */
+
 .form-wrapper {
   width: 100%;
   max-width: 900px;

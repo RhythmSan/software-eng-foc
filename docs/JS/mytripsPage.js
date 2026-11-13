@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else if (action === 'remove') {
           if (confirm('Remove this place from your trips?')) {
-            // TODO: actually remove from storage — for now just hide it
+            
             btn.closest('.trip-card').style.display = 'none';
           }
         }

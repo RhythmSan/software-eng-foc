@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Save the login session
         localStorage.setItem('heritageAdmin', 'true');
         
-        // 2. Redirect to the dashboard
-        // IMPORTANT: Make sure this matches your actual HTML file name exactly!
+        // =Redirect to the dashboard
+ 
         window.location.href = 'adminDashboard.html'; 
         
       } else {

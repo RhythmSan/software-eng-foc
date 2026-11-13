@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.tab;
-      if (target === mode) return;   // already on this tab
+      if (target === mode) return;   
       mode = target;
       switchMode(mode);
     });
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //   FAKE AUTH (replace with real fetch later)
+  //   FAKE AUTH 
 
   function fakeAuthCall(email, password) {
     submitBtn.disabled = true;
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = mode === 'login' ? 'Log in' : 'Sign up';
 
       // TODO: replace with real authentication endpoint
-      // Example:
       // fetch('/api/auth', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -171,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // TODO: replace with backend call:
+
     // fetch('/api/auth/forgot', { method: 'POST', body: JSON.stringify({ email }) });
 
     showMessage(`Reset link sent to ${email}`, 'success');

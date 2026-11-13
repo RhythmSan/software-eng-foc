@@ -84,7 +84,7 @@ body {
 
 .admin-nav-item:hover { background: rgba(255,255,255,0.08); color: var(--white); }
 
-/* Active Sidebar Link - GOLD */
+
 .admin-nav-item.active {
   background: var(--white);
   color: var(--gold); 
@@ -121,12 +121,10 @@ body {
   flex: 1;
   margin-left: var(--sidebar-w);
   padding: 40px;
-  /* Changed from center to flex-start to push it to the left */
   display: flex;
   justify-content: flex-start; 
 }
 
-/* Wrapper forces Header and Form Card to share the same exact width */
 .form-wrapper {
   width: 100%;
   max-width: 900px;
@@ -150,7 +148,7 @@ body {
   display: inline-block;
 }
 
-/* Gold Underline under Title */
+
 .admin-page-header h1::after {
   content: "";
   position: absolute;
@@ -164,7 +162,7 @@ body {
 
 .admin-page-header p { font-size: 0.95rem; color: var(--text-dark); margin-top: 12px; }
 
-/* Back Button (Fixed to be white with navy border/text) */
+/* Back Button*/
 .admin-back-btn {
   display: inline-flex;
   align-items: center;
