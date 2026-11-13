@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  //   THE DATA — one entry per place
+  //
 
   const PLACES = {
     'barasoain': {

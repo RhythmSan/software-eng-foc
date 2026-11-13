@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bucketCount  = trips.filter(t => t.status === 'bucket').length;
 
   /* ========================================================
-     4. SAMPLE REVIEWS (replace with backend fetch later)
+     4. SAMPLE REVIEWS 
      ======================================================== */
   const DEFAULT_REVIEWS = [
     {
@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
     user = { name: newName, email: newEmail, initials: initials || DEFAULT_USER.initials };
 
     // TODO: replace this with a real API call to your backend
-    // Example:
     // await fetch('/api/user', { method: 'PUT', body: JSON.stringify(user) });
 
     try {
@@ -215,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return showMessage(passwordMessage, 'Passwords do not match.', 'error');
     }
 
-    // TODO: replace with backend call:
+
     // await fetch('/api/user/password', { method: 'POST', body: JSON.stringify({ current, next }) });
 
     console.log('Password change requested (not saved yet)');

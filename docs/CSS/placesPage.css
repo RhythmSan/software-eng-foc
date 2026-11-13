@@ -76,7 +76,7 @@ body {
 .save-btn.is-saved { background-color: var(--bg-dark-green); }
 .save-btn.is-saved .icon-btn-img { filter: brightness(0) invert(1); }
 
-/* ========== PAGE WRAP (two columns) ========== */
+/* ========== PAGE WRAP ========== */
 .place-wrap {
   max-width: 1200px;
   margin: 0 auto;

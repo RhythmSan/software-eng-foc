@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ========================================================
-     1. LANDMARK DATA (shared by Explore list)
+     1. LANDMARK DATA 
      ======================================================== */
   const LANDMARKS = [
     { id: 'barasoain',         name: 'Barasoain Church',                 category: 'historical', distance: '0.9 km', rating: 5, image: '../Images/Barasoain-Church.jpg' },
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ========================================================
-     2. FEATURED LANDMARKS — horizontal slider (no tabs)
+     2. FEATURED LANDMARKS
      ======================================================== */
   const grid = document.getElementById('cardGrid');
 
@@ -196,9 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Click on dots to navigate
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
-        clearInterval(slideInterval); // Stop auto-play temporarily
+        clearInterval(slideInterval); 
         goToSlide(i);
-        startSlideShow(); // Restart auto-play
+        startSlideShow();
       });
     });
 

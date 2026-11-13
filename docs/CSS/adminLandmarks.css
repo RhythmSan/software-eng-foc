@@ -85,7 +85,7 @@ body {
 
 .admin-nav-item:hover { background: rgba(255,255,255,0.08); color: var(--white); }
 
-/* Active Sidebar Link - GOLD AS REQUESTED */
+
 .admin-nav-item.active {
   background: var(--white);
   color: var(--gold); 
@@ -199,7 +199,7 @@ body {
   text-align: left;
 }
 
-/* Navy Header exactly as screenshot */
+
 .admin-table th {
   background: var(--navy);
   color: var(--white);

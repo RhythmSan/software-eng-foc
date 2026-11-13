@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Handle Filter Pill Toggles (Category & Status)
+  // 1. Handle Filter Pill Toggles 
   const pillGroups = document.querySelectorAll('.pill-group');
   
   pillGroups.forEach(group => {
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sign Out Logic
   document.getElementById('adminSignOutBtn')?.addEventListener('click', () => {
     if (confirm('Sign out of the Admin Portal?')) {
-      // Clear the session
+
       localStorage.removeItem('heritageAdmin');
       
-      // Redirect back to the login page 
+
       window.location.href = 'admin.html';
     }
   });
